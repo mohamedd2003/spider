@@ -9,25 +9,30 @@ export default function Hero() {
     <div className="max-w-prose md:py-16 py-24">
       <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">
         Understand user flow and
-        <strong className="text-red-600"> increase </strong>
+        <strong className="text-[#467b7b]"> increase </strong>
         conversions
       </h1>
 
       <p className="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed dark:text-gray-200 lato">
-      Spider is a results-driven marketing agency that crafts data-powered campaigns to boost your brand visibility
+      <span className='text-[#467b7b] text-[32px] font-extrabold'> Spider</span> is a results-driven marketing agency that crafts data-powered campaigns to boost your brand visibility
       </p>
 
       <div className="mt-4 flex gap-4 sm:mt-6">
-        <a
-          className="inline-block rounded border border-red-600 bg-red-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-red-700"
+        <a aos-data="fade-right"
+        data-aos-duration="1000"
+
+          className="inline-block rounded border border-[#467b7b] bg-[#467b7b] px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-[#467b7b]"
           href="#services"
         >
           Get Started
         </a>
 
-        <a
-          className="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white"
-          href="#services"
+        <a aos-data="fade-left"
+        data-aos-duration="1000"
+          className="inline-block rounded border
+           border-[#467b7b] px-5 py-3 font-medium
+            text-white shadow-sm transition-colors  hover:text-white dark:border-gray-700 dark:text-gray-200 hover:bg-[#467b7b]"
+          href="#About"
         >
           Learn More
         </a>
