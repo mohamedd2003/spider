@@ -18,7 +18,7 @@ export default function Hero() {
       </p>
 
       <div className="mt-4 flex gap-4 sm:mt-6">
-        <a aos-data="fade-right"
+        <a data-aos="fade-left"
         data-aos-duration="1000"
 
           className="inline-block rounded border border-[#467b7b] bg-[#467b7b] px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-[#467b7b]"
@@ -27,8 +27,8 @@ export default function Hero() {
           Get Started
         </a>
 
-        <a aos-data="fade-left"
-        data-aos-duration="1000"
+        <a data-aos="fade-right"
+             data-aos-duration="1000"
           className="inline-block rounded border
            border-[#467b7b] px-5 py-3 font-medium
             text-white shadow-sm transition-colors  hover:text-white dark:border-gray-700 dark:text-gray-200 hover:bg-[#467b7b]"

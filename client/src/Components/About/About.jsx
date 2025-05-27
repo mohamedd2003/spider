@@ -17,13 +17,13 @@ export default function About() {
   <li  data-aos-duration="1000" data-aos="fade-right" className='mt-3'  >
   We focus on delivering high-quality, unique content that earns client trust.
 </li>
-<li  data-aos-duration="1000" data-aos-delay="1000" data-aos="fade-left" className='mt-3'>
+<li  data-aos-duration="1000" data-aos-delay="350" data-aos="fade-left" className='mt-3'>
 Our team of experts crafts impactful messages, builds strong brand identities,
 </li>
-<li  data-aos-duration="1000" data-aos-delay="1300" data-aos="fade-right" className='mt-3'>
+<li  data-aos-duration="1000" data-aos-delay="400" data-aos="fade-right" className='mt-3'>
  Develops effective strategies to reach your target audience.
 </li>
-<li  data-aos-duration="1000" data-aos-delay="1400" data-aos="fade-right" className='mt-3'>
+<li  data-aos-duration="1000" data-aos-delay="450" data-aos="fade-right" className='mt-3'>
 We start every project with in-depth market research to ensure your brand stands out in a competitive landscape.
 </li>
 

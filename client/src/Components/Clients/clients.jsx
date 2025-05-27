@@ -1,7 +1,7 @@
 import React from 'react'
 import service1 from '../../assets/services.jpg'
 
-export default function Events() {
+export default function Clients() {
   return (
         <section  className='w-[80%] mx-auto my-10 text-white lato'>
 <div className="flex flex-wrap ">
