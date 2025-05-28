@@ -11,12 +11,12 @@ export default function Clients() {
   <div className="flex flex-wrap items-center">
     <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
 <div className="client p-2  ">
-<img className=' h-[200px] rounded-2xl w-full '   src={blabn} alt="" />
+<img className='rounded-2xl w-full  '   src={blabn} alt="" />
 </div>
     </Link>
     <Link className='w-1/2 md:w-1/3 lg:w-3/12  '>
 <div className="client p-2  ">
-<img className='  rounded-2xl w-full  w-full'   src={honda} alt="" />
+<img className='  rounded-2xl w-full  '   src={honda} alt="" />
 </div>
     </Link>
     <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
@@ -26,7 +26,7 @@ export default function Clients() {
     </Link>
     <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
 <div className="client p-2  ">
-<img className=' h-[200px] rounded-2xl w-full '  src={honda} alt="" />
+<img className='  rounded-2xl w-full '  src={honda} alt="" />
 </div>
     </Link>
   </div>
