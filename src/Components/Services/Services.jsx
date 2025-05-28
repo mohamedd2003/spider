@@ -18,7 +18,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Identity</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Branding </p>
   </div>
@@ -37,7 +37,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Reputation</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">PR</p>
   </div>
@@ -56,7 +56,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Research</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Marketing Studies </p>
   </div>
@@ -75,7 +75,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Advertising</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Digital Marketing </p>
   </div>
@@ -96,7 +96,7 @@ export default function Services() {
     <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
       <strong class="font-medium"> Content</strong>
 
-      <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+      <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
       <p class="mt-0.5 opacity-50 sm:mt-0">Media Production </p>
     </div>
@@ -116,7 +116,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Accounts</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Activations </p>
   </div>
@@ -135,7 +135,7 @@ export default function Services() {
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <strong class="font-medium">Programming</strong>
 
-    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#467b7b] "></span>
+    <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-[#125e51] "></span>
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Web Development </p>
   </div>
