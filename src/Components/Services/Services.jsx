@@ -8,7 +8,7 @@ export default function Services() {
 <div className="flex flex-wrap ">
 <Link   data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src={service2}
@@ -22,12 +22,12 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Branding </p>
   </div>
-</a>
+
 </div>
 </Link>
 <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src={service1}
@@ -41,12 +41,12 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">PR</p>
   </div>
-</a>
+
 </div>
 </Link>
 <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
@@ -60,12 +60,12 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Marketing Studies </p>
   </div>
-</a>
+
 </div>
 </Link>
 <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
@@ -79,14 +79,14 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Digital Marketing </p>
   </div>
-</a>
+
 </div>
 </Link>
 
 
   <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
   <div>
-    <a href="#" class="block">
+    
     <img
       alt=""
       src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
@@ -100,13 +100,13 @@ export default function Services() {
 
       <p class="mt-0.5 opacity-50 sm:mt-0">Media Production </p>
     </div>
-  </a>
+  
   </div>
   </Link>
 
   <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src={service2}
@@ -120,12 +120,12 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Activations </p>
   </div>
-</a>
+
 </div>
 </Link>
 <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
-  <a href="#" class="block">
+  
   <img
     alt=""
     src={service2}
@@ -139,7 +139,7 @@ export default function Services() {
 
     <p class="mt-0.5 opacity-50 sm:mt-0">Web Development </p>
   </div>
-</a>
+
 </div>
 </Link>
 </div>

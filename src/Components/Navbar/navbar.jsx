@@ -84,13 +84,13 @@ export default function navbar() {
   </li>
   <li>
     <a className="text-xl" href='#services'>
-   <i class="fa-solid fa-server  fa-sm"></i>
+   <i className="fa-solid fa-server  fa-sm"></i>
   Services
     </a>
   </li>
   <li>
     <a className="text-xl" href='#events'>
-   <i class="fa-solid fa-users-between-lines fa-sm"></i>
+   <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Clients
     </a>
   </li>
