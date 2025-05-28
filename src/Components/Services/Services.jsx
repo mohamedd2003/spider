@@ -12,7 +12,7 @@ export default function Services() {
   <img
     alt=""
     src={service2}
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -31,7 +31,7 @@ export default function Services() {
   <img
     alt=""
     src={service1}
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -50,7 +50,7 @@ export default function Services() {
   <img
     alt=""
     src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -69,7 +69,7 @@ export default function Services() {
   <img
     alt=""
     src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -90,7 +90,7 @@ export default function Services() {
     <img
       alt=""
       src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-      class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+      class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
     />
 
     <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -110,7 +110,7 @@ export default function Services() {
   <img
     alt=""
     src={service2}
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -129,7 +129,7 @@ export default function Services() {
   <img
     alt=""
     src={service2}
-    class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
+    class="h-32 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72"
   />
 
   <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">

@@ -7,7 +7,7 @@ export default function About() {
   <section className="overflow-hidden  sm:grid sm:grid-cols-2 sm:items-center lato">
   <div className="p-8 md:p-12 lg:px-16 lg:py-24">
     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-      <h2 className="text-2xl font-bold text-white md:text-3xl">
+      <h2 className="text-xl font-bold text-white md:text-3xl">
          <span className='text-[#467b7b]'>Spider</span> Marketing Agency Established in 2018.
       </h2>
 
