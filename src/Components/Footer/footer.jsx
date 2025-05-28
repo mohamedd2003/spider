@@ -31,8 +31,8 @@ export default function Footer() {
               </p>
 
               <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
-                <li>Monday to Friday: 10am - 5pm</li>
-                <li>Weekend: 10am - 3pm</li>
+                <li>Sunday to Thursday: 9am - 6pm</li>
+                {/* <li>Weekend: 10am - 3pm</li> */}
               </ul>
 
               <ul className="mt-8 flex gap-6">
