@@ -13,7 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script>
-  AOS.init();
+ AOS.init({
+  once: false  // الأنيميشن يشتغل كل مرة العنصر يدخل في الشاشة
+});
 </script> 
     
     <script type="module" src="/src/main.jsx"></script>

@@ -26,7 +26,10 @@ export default function navbar() {
         </label>
       </div>
       <div className="mx-2 flex-1 px-2">
-         <span className=' text-4xl flex content-center items-center'> Sp<img src={logo} className='h-[70px] '  width={70}  alt="logo"/>der</span> 
+         <span data-aos="fade-up" data-aos-duration="1000"
+        className=' text-4xl flex content-center items-center '> Sp<img data-aos="fade-down" data-aos-duration="1000"
+         data-aos-delay="500"
+         src={logo} className='h-[70px] '  width={70}  alt="logo"/>der</span> 
         </div>
       <div className="hidden flex-none lg:block ">
         <ul className="menu menu-horizontal bg-black text-white">

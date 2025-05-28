@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section  className='w-[80%] mx-auto my-10 text-white lato'>
 <div className="flex flex-wrap ">
-<div className='lg:w-4/12 w-full p-2'>
+<div className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -24,7 +24,7 @@ export default function Services() {
 </a>
 </div>
 </div>
-<div className='lg:w-4/12 w-full p-2'>
+<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -43,7 +43,7 @@ export default function Services() {
 </a>
 </div>
 </div>
-<div className='lg:w-4/12 w-full p-2'>
+<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -62,7 +62,7 @@ export default function Services() {
 </a>
 </div>
 </div>
-<div className='lg:w-4/12 w-full p-2'>
+<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -83,7 +83,7 @@ export default function Services() {
 </div>
 
 
-  <div className='lg:w-4/12 w-full p-2'>
+  <div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
   <div>
     <a href="#" class="block">
     <img
@@ -103,7 +103,7 @@ export default function Services() {
   </div>
   </div>
 
-  <div className='lg:w-4/12 w-full p-2'>
+  <div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -122,7 +122,7 @@ export default function Services() {
 </a>
 </div>
 </div>
-<div className='lg:w-4/12 w-full p-2'>
+<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img

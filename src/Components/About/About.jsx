@@ -13,18 +13,14 @@ export default function About() {
 
      
           
-<ul className="lato text-white text-decoration-none list-disc list-inside text-[16px] ">
-  <li  data-aos-duration="1000" data-aos="fade-right" className='mt-3'  >
-  We focus on delivering high-quality, unique content that earns client trust.
+<ul className=" font-thin text-white  list-disc  text-[12px] md:text-[17px]  ">
+  <li  data-aos-duration="1000" data-aos="fade-right" className='mt-3 fo'  >We focus on delivering high-quality, unique content that earns client trust.
 </li>
-<li  data-aos-duration="1000" data-aos-delay="350" data-aos="fade-left" className='mt-3'>
-Our team of experts crafts impactful messages, builds strong brand identities,
+<li  data-aos-duration="1000" data-aos-delay="350" data-aos="fade-left" className='mt-3'>Our team of experts crafts impactful messages, builds strong brand identities,
 </li>
-<li  data-aos-duration="1000" data-aos-delay="400" data-aos="fade-right" className='mt-3'>
- Develops effective strategies to reach your target audience.
+<li  data-aos-duration="1000" data-aos-delay="400" data-aos="fade-right" className='mt-3'>Develops effective strategies to reach your target audience.
 </li>
-<li  data-aos-duration="1000" data-aos-delay="450" data-aos="fade-right" className='mt-3'>
-We start every project with in-depth market research to ensure your brand stands out in a competitive landscape.
+<li  data-aos-duration="1000" data-aos-delay="550" data-aos="fade-right" className='mt-3'>We start every project with in-depth market research to ensure your brand stands out in a competitive landscape.
 </li>
 
 </ul>
