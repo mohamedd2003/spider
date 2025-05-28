@@ -26,7 +26,7 @@ export default function navbar() {
         </label>
       </div>
       <div className="mx-2 flex-1 px-2">
-         <span data-aos="fade-up" data-aos-duration="1000"
+         <span 
         className=' text-4xl flex content-center items-center '> Sp<img data-aos="fade-down" data-aos-duration="1000"
          data-aos-delay="500"
          src={logo} className='h-[70px] '  width={70}  alt="logo"/>der</span> 
@@ -37,8 +37,7 @@ export default function navbar() {
           <li><a href="#" className='text-xl'>Home</a></li>
           <li><a href="#About" className='text-xl'>About</a></li>
           <li><a href="#services" className='text-xl'>Services</a></li>
-          <li><a href="#Events" className='text-xl'>Events</a></li>
-          <li><a href="#Gallery" className='text-xl'>Gallery</a></li>
+          <li><a href="#clients" className='text-xl'>Clients</a></li>
         </ul>
       </div>
     </div>
@@ -85,55 +84,17 @@ export default function navbar() {
   </li>
   <li>
     <a className="text-xl" href='#services'>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
+   <i class="fa-solid fa-server  fa-sm"></i>
   Services
     </a>
   </li>
   <li>
     <a className="text-xl" href='#events'>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-Events
+   <i class="fa-solid fa-users-between-lines fa-sm"></i>
+Clients
     </a>
   </li>
-  <li>
-    <a className="text-xl">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-Gallery
-    </a>
-  </li>
+  
     </ul>
   </div>
 </div>

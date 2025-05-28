@@ -1,11 +1,12 @@
 import React from 'react'
 import service1 from '../../assets/services.jpg'
 import service2 from '../../assets/services2.jpg'
+import { Link } from 'react-router-dom'
 export default function Services() {
   return (
     <section  className='w-[80%] mx-auto my-10 text-white lato'>
 <div className="flex flex-wrap ">
-<div className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-full p-2'>
+<Link   data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -23,8 +24,8 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
-<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+</Link>
+<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -42,8 +43,8 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
-<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+</Link>
+<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -61,8 +62,8 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
-<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+</Link>
+<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -80,10 +81,10 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
+</Link>
 
 
-  <div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+  <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
   <div>
     <a href="#" class="block">
     <img
@@ -101,9 +102,9 @@ export default function Services() {
     </div>
   </a>
   </div>
-  </div>
+  </Link>
 
-  <div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+  <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -121,8 +122,8 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
-<div className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+</Link>
+<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
 <div>
   <a href="#" class="block">
   <img
@@ -140,7 +141,7 @@ export default function Services() {
   </div>
 </a>
 </div>
-</div>
+</Link>
 </div>
 </section>
   )

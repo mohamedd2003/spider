@@ -35,6 +35,17 @@ export default function Footer() {
         </ul>
 
         <ul className="mt-8 flex gap-6">
+            <li>
+            <a
+              href="mailto:sspidermarketing@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+              className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+            >
+              <span className="sr-only">Gmail</span>
+<i class="fa-solid fa-envelope  fa-lg"></i>
+            </a>
+          </li>
           <li>
             <a
               href="https://www.facebook.com/share/16c9k5SZ9n/?mibextid=wwXIfr"
@@ -53,6 +64,7 @@ export default function Footer() {
               </svg>
             </a>
           </li>
+        
 
           <li>
             <a
@@ -123,13 +135,13 @@ export default function Footer() {
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                gallery
+              <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+               services
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+              <a href="#clients" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
                 Clients
               </a>
             </li>
@@ -143,21 +155,21 @@ export default function Footer() {
       <div className="sm:flex sm:items-center sm:justify-between">
         <ul className="flex flex-wrap gap-4 text-xs">
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
               Terms & Conditions
-            </a>
+            </p>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
               Privacy Policy
-            </a>
+            </p>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
               Cookies
-            </a>
+            </p>
           </li>
         </ul>
 
