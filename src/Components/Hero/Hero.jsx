@@ -42,13 +42,13 @@ export default function Hero() {
   <div className="hero-overlay"></div>
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
-     <h1 data-aos="fade" data-aos-duration="1000" className="text-4xl mb-5 font-bold text-gray-900 sm:text-5xl dark:text-white">
+     <h1 data-aos="fade" data-aos-duration="1000" className="text-2xl mb-5 font-bold text-gray-900 md:text-4xl text-white ">
         Understand User Flow and
         <strong className="text-[#467b7b]"> Increase </strong>
        Conversions
       </h1>
    
-      <a href="#services"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="500" className=" px-5 py-2 rounded-full hover:bg-white hover:text-[#467b7b] lato duration-200 text-white  bg-[#467b7b]  border-[#467b7b]">Get Started</a>
+      <a href="#services"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="500" className=" px-3 py-2 md:px-5  rounded-full hover:bg-white hover:text-[#467b7b] lato duration-200 text-white  bg-[#467b7b]  border-[#467b7b]">Get Started</a>
     </div>
   </div>
 </div>

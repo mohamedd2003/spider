@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section  className='w-[80%] mx-auto my-10 text-white lato'>
 <div className="flex flex-wrap ">
-<Link   data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-full p-2'>
+<Link    className='lg:w-4/12 xl:w-3/12 md:w-6/12  w-4/12 p-2'>
 <div>
   
   <img
@@ -25,7 +25,7 @@ export default function Services() {
 
 </div>
 </Link>
-<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+<Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
 <div>
   
   <img
@@ -44,7 +44,7 @@ export default function Services() {
 
 </div>
 </Link>
-<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+<Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
 <div>
   
   <img
@@ -63,7 +63,7 @@ export default function Services() {
 
 </div>
 </Link>
-<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+<Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
 <div>
   
   <img
@@ -84,7 +84,7 @@ export default function Services() {
 </Link>
 
 
-  <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+  <Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
   <div>
     
     <img
@@ -104,7 +104,7 @@ export default function Services() {
   </div>
   </Link>
 
-  <Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+  <Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
 <div>
   
   <img
@@ -123,7 +123,7 @@ export default function Services() {
 
 </div>
 </Link>
-<Link  data-aos="fade-down" data-aos-duration="1000" className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-full p-2'>
+<Link   className='lg:w-4/12 xl:w-3/12 md:w-6/12 w-4/12 p-2'>
 <div>
   
   <img

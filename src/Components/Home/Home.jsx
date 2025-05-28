@@ -9,13 +9,13 @@ export default function Home() {
 <Hero/>
 
 <h2 id='About'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center text-7xl raleway pt-10 text-white'>About Us</h2>
+             data-aos-duration="1000" className='text-center text-4xl md:text-6xl lg:text-7xl  raleway pt-10 text-white'>About Us</h2>
 <About/>
 <h2 id='services'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center text-7xl raleway pt-10 text-white'>Services</h2>
+             data-aos-duration="1000" className='text-center text-4xl md:text-6xl lg:text-7xl raleway pt-10 text-white'>Services</h2>
 <Services/>
 <h2 id='clients'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center text-7xl raleway pt-10 text-white'>Clients</h2>
+             data-aos-duration="1000" className='text-center text-4xl md:text-6xl lg:text-7xl raleway pt-10 text-white'>Clients</h2>
 <Clients/>
    </>
   )

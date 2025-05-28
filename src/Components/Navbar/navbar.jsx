@@ -27,9 +27,9 @@ export default function navbar() {
       </div>
       <div className="mx-2 flex-1 px-2">
          <span 
-        className=' text-4xl flex content-center items-center '> Sp<img data-aos="fade-down" data-aos-duration="1000"
+        className=' text-2xl  md:text-4xl flex content-center items-center '> Sp<img data-aos="fade-down" data-aos-duration="1000"
          data-aos-delay="500"
-         src={logo} className='h-[70px] '  width={70}  alt="logo"/>der</span> 
+         src={logo} className=' md:h-[70px] md:w-[70px] h-[50px] w-[50px] '    alt="logo"/>der</span> 
         </div>
       <div className="hidden flex-none lg:block ">
         <ul className="menu menu-horizontal bg-black text-white">
@@ -49,7 +49,7 @@ export default function navbar() {
     <ul className="menu bg-black text-white min-h-full w-80 p-4  ">
       {/* Sidebar content here */}
     <li>
-    <a href='#' className="text-xl">
+    <a href='#' className="text-md">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"
@@ -66,7 +66,7 @@ export default function navbar() {
     </a>
   </li>
   <li>
-    <a className="text-xl" href='#about'>
+    <a className="text-md" href='#about'>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"
@@ -83,13 +83,13 @@ export default function navbar() {
     </a>
   </li>
   <li>
-    <a className="text-xl" href='#services'>
+    <a className="text-md" href='#services'>
    <i className="fa-solid fa-server  fa-sm"></i>
   Services
     </a>
   </li>
   <li>
-    <a className="text-xl" href='#events'>
+    <a className="text-md" href='#events'>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Clients
     </a>
