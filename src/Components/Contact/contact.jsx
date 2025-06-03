@@ -24,14 +24,14 @@ export default function contact() {
 <section  id='contact' className='py-10 w-[80%] mx-auto '> 
 
   <div className='flex flex-wrap '>
-<div className='w-full md:w-1/2'>
-<div className='flex items-center justify-center lg:mt-6'>
+<div className='w-full md:w-1/2 mt-2'>
+<div className='flex items-center justify-start lg:mt-6'>
  <h2 id='About'  data-aos="fade-down"
              data-aos-duration="1000" 
              className='text-center text-5xl md:text-6xl lg:text-8xl raleway     text-main'>Let's get <br/> in touch</h2>
 </div>
 </div>
-<div data-aos="fade-left" data-aos-duration="1000" className='w-full md:w-1/2'>
+<div data-aos="fade-left" data-aos-duration="1000" className='w-full md:w-1/2 mt-2'>
 <div>
 
 

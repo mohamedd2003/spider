@@ -90,13 +90,13 @@ export default function navbar() {
     </a>
   </li>
   <li>
-    <a className="text-md" href='#events'>
+    <a className="text-md" href='#clients'>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Clients
     </a>
   </li>
   <li>
-    <a className="text-md" href='#events'>
+    <a className="text-md" href='#contact'>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Contact 
     </a>
