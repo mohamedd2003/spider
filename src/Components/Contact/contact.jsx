@@ -21,7 +21,7 @@ export default function contact() {
 //  </div>
 //    </section>
 
-<section className='py-10 w-[80%] mx-auto '> 
+<section  id='contact' className='py-10 w-[80%] mx-auto '> 
 
   <div className='flex flex-wrap '>
 <div className='w-full md:w-1/2'>
