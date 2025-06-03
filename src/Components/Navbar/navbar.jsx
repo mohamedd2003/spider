@@ -38,6 +38,7 @@ export default function navbar() {
           <li><a href="#About" className='text-xl'>About</a></li>
           <li><a href="#services" className='text-xl'>Services</a></li>
           <li><a href="#clients" className='text-xl'>Clients</a></li>
+          <li><a href="#contact" className='text-xl'>Contact</a></li>
         </ul>
       </div>
     </div>
@@ -92,6 +93,12 @@ export default function navbar() {
     <a className="text-md" href='#events'>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Clients
+    </a>
+  </li>
+  <li>
+    <a className="text-md" href='#events'>
+   <i className="fa-solid fa-users-between-lines fa-sm"></i>
+Contact 
     </a>
   </li>
   

@@ -35,5 +35,12 @@
   0% { border-style: none}
   100% { border-style: double}
 }
+
+.text-main{
+  color: #125e51;
+}
+.bg-main{
+  background-color: #125e51;
+}
       
 
