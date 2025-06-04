@@ -19,7 +19,9 @@ export default function Hero() {
        Conversions
       </h1>
    
-      <a href="#services"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="500" className=" px-3 py-2 md:px-5  rounded-full hover:bg-white hover:text-[#125e51] lato duration-200 text-white  bg-[#125e51]  border-[#125e51]">Get Started</a>
+      <a href="#services"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="500"
+       className=" px-3 py-2 md:px-5  rounded-full hover:bg-white hover:text-[#125e51] raleway duration-200
+        text-white  bg-[#125e51]  border-[#125e51]">Get Started</a>
     </div>
   </div>
 </div>
