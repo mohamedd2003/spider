@@ -1,9 +1,9 @@
 import React from 'react'
-import Hero from '../Hero/Hero'
-import About from '../About/About'
-import Services from '../Services/Services'
-import Clients from '../Clients/clients'
-import Contact from '../Contact/contact'
+import Hero from '../../Components/Hero/Hero'
+import About from '../../Components/About/About'
+import Services from '../../Components/Services/Services'
+import Clients from '../../Components/Clients/clients'
+import Contact from '../../Components/Contact/contact'
 export default function Home() {
   return (
    <>
