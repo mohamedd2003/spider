@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section >
  
-  <section className="overflow-hidden  sm:grid sm:grid-cols-2 sm:items-center lato">
+  <section   className="overflow-hidden  sm:grid sm:grid-cols-2 sm:items-center lato">
   <div className="p-8 md:p-12 lg:px-16 lg:py-24">
     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h2 className="text-xl font-bold text-white md:text-3xl">

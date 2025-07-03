@@ -71,7 +71,7 @@ export default function navbar() {
   </li>
   <li>
     
-    <a className="text-lg" herf='/#about' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
+    <a className="text-lg" href='/#about' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"

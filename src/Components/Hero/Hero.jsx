@@ -4,10 +4,18 @@ import React from 'react'
 export default function Hero() {
   return (
     <section id='#' className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Video Background */}
+      {/* Video Background for Mobile/Tablet */}
       <video
-        className="absolute inset-0 w-full h-full object-fit z-0"
-        //  src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577486/Colored_Vid_efvsmt.mp4"
+        className="absolute inset-0 w-full h-full object-cover z-0 md:hidden"
+        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* Video Background for Desktop/Large Screens */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
         src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
         autoPlay
         loop
