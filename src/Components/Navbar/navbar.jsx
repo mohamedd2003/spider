@@ -37,6 +37,7 @@ export default function navbar() {
           <li><a href="#" className='text-xl'>Home</a></li>
           <li><a href="#About" className='text-xl'>About</a></li>
           <li><a href="#services" className='text-xl'>Services</a></li>
+          <li><a href="#ourwork" className='text-xl'>Our Work</a></li>
           <li><a href="#clients" className='text-xl'>Clients</a></li>
           <li><a href="#contact" className='text-xl'>Contact</a></li>
         </ul>
@@ -87,6 +88,12 @@ export default function navbar() {
     <a className="text-md" href='#services'>
    <i className="fa-solid fa-server  fa-sm"></i>
   Services
+    </a>
+  </li>
+  <li>
+    <a className="text-md" href='#ourwork'>
+   <i className="fa-solid fa-briefcase fa-sm"></i>
+Our Work
     </a>
   </li>
   <li>
