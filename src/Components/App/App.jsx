@@ -7,6 +7,7 @@ const Videos = React.lazy(() => import('../../Pages/Videos'));
 const Photos = React.lazy(() => import('../../Pages/Photos'));
 const Designs = React.lazy(() => import('../../Pages/Designs'));
 const Campaigns = React.lazy(() => import('../../Pages/Campaigns'));
+const NotFound = React.lazy(() => import('../../Pages/NotFound'));
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const routes = createBrowserRouter([
       {
         path: "campaigns",
         element: <Campaigns/>
+      },
+      {
+        path: '*',
+        element: <NotFound/>
       }
     ]
   }
