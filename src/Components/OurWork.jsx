@@ -13,7 +13,6 @@ export default function OurWork() {
             <div className="flex flex-col items-center justify-center h-full">
               <Video className="w-12 h-12 mb-4 drop-shadow-lg text-main" />
               <h3 className="text-xl font-bold mb-2 group-hover:text-main transition-colors raleway">Videos</h3>
-              <p className="text-black group-hover:text-main">Creative video projects, ads, and reels.</p>
             </div>
             <div className="absolute inset-0 bg-main/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl pointer-events-none" />
           </a>
@@ -22,7 +21,6 @@ export default function OurWork() {
             <div className="flex flex-col items-center justify-center h-full">
               <Camera className="w-12 h-12 mb-4 drop-shadow-lg text-main" />
               <h3 className="text-xl font-bold mb-2 group-hover:text-main transition-colors raleway">Photos</h3>
-              <p className="text-black group-hover:text-main">Photography for brands, products, and events.</p>
             </div>
             <div className="absolute inset-0 bg-main/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl pointer-events-none" />
           </a>
@@ -31,7 +29,6 @@ export default function OurWork() {
             <div className="flex flex-col items-center justify-center h-full">
               <Palette className="w-12 h-12 mb-4 drop-shadow-lg text-main" />
               <h3 className="text-xl font-bold mb-2 group-hover:text-main transition-colors raleway">Designs</h3>
-              <p className="text-black group-hover:text-main">Branding, graphics, and creative design work.</p>
             </div>
             <div className="absolute inset-0 bg-main/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl pointer-events-none" />
           </a>
@@ -40,7 +37,6 @@ export default function OurWork() {
             <div className="flex flex-col items-center justify-center h-full">
               <Megaphone className="w-12 h-12 mb-4 drop-shadow-lg text-main" />
               <h3 className="text-xl font-bold mb-2 group-hover:text-main transition-colors raleway">Campaigns</h3>
-              <p className="text-black group-hover:text-main">Marketing and advertising campaigns.</p>
             </div>
             <div className="absolute inset-0 bg-main/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl pointer-events-none" />
           </a>
