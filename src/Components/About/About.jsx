@@ -35,7 +35,7 @@ export default function About() {
   <img
   data-aos-duration="1000" data-aos="fade-left"
     alt="about us image"
-    src={aboutImg}
+    src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751580564/IMG_8634_cmnjsj.webp"
     className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
   />
 </section>

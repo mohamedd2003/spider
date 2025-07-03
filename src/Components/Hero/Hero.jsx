@@ -6,7 +6,7 @@ export default function Hero() {
     <section id='#' className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Video Background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-fit z-0"
         //  src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577486/Colored_Vid_efvsmt.mp4"
         src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
         autoPlay
