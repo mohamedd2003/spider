@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Video Background for Mobile/Tablet */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0 md:hidden"
-        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
+        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751582736/0704_siebek.mp4"
         autoPlay
         loop
         muted
