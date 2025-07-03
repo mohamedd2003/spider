@@ -11,7 +11,7 @@ export default function Home() {
    <>
 <Hero/>
 
-<h2 id='About'  data-aos="fade-down"
+<h2 id='about'  data-aos="fade-down"
              data-aos-duration="1000" 
              className='text-center text-4xl md:text-6xl lg:text-7xl  raleway pt-16   text-white'>About Us</h2>
 <About/>

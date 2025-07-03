@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from '../../assets/logo.png' // Adjust the path as necessary
+import { Link } from 'react-router-dom'
+
 export default function navbar() {
   return (
     <>
@@ -51,7 +53,7 @@ export default function navbar() {
     <ul className="menu bg-black text-white min-h-full w-80 p-4  ">
       {/* Sidebar content here */}
     <li>
-    <a href='/#' className="text-md">
+    <a href='/#' className="text-lg" onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"
@@ -68,7 +70,8 @@ export default function navbar() {
     </a>
   </li>
   <li>
-    <a className="text-md" href='/#about'>
+    
+    <a className="text-lg" herf='/#about' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"
@@ -85,25 +88,25 @@ export default function navbar() {
     </a>
   </li>
   <li>
-    <a className="text-md" href='/#services'>
+    <a className="text-lg" href='/#services' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
    <i className="fa-solid fa-server  fa-sm"></i>
   Services
     </a>
   </li>
   <li>
-    <a className="text-md" href='/#ourwork'>
+    <a className="text-lg" href='/#ourwork' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
    <i className="fa-solid fa-briefcase fa-sm"></i>
 Our Work
     </a>
   </li>
   <li>
-    <a className="text-md" href='/#clients'>
+    <a className="text-lg" href='/#clients' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Clients
     </a>
   </li>
   <li>
-    <a className="text-md" href='#contact'>
+    <a className="text-lg" href='/#contact' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
    <i className="fa-solid fa-users-between-lines fa-sm"></i>
 Contact 
     </a>
