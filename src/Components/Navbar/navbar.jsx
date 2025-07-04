@@ -36,7 +36,7 @@ export default function navbar() {
       <div className="hidden flex-none lg:block ">
         <ul className="menu menu-horizontal bg-black text-white">
           {/* Navbar menu content here */}
-          <li><a href="#" className='text-xl'>Home</a></li>
+          <li><a href="/#" className='text-xl'>Home</a></li>
           <li><a href="/#About" className='text-xl'>About</a></li>
           <li><a href="/#services" className='text-xl'>Services</a></li>
           <li><a href="/#ourwork" className='text-xl'>Our Work</a></li>

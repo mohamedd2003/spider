@@ -9,22 +9,22 @@ export default function Clients() {
 <>
 <section className='w-[80%] mx-auto py-10'> 
   <div className="flex flex-wrap items-center">
-    <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
+    <Link to="/clients/blabn" className='w-1/2 md:w-1/3 lg:w-3/12 '>
 <div className="client p-2  ">
 <img className='rounded-2xl w-full  '   src={blabn} alt="" />
 </div>
     </Link>
-    <Link className='w-1/2 md:w-1/3 lg:w-3/12  '>
+    <Link to="/clients/honda" className='w-1/2 md:w-1/3 lg:w-3/12  '>
 <div className="client p-2  ">
 <img className='  rounded-2xl w-full  '   src={honda} alt="" />
 </div>
     </Link>
-    <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
+    <Link to="/clients/elkoptan" className='w-1/2 md:w-1/3 lg:w-3/12 '>
 <div className="client p-2  ">
 <img className='  rounded-2xl w-full '  src={elkoptan} alt="" />
 </div>
     </Link>
-    <Link className='w-1/2 md:w-1/3 lg:w-3/12 '>
+    <Link to="/clients/honda" className='w-1/2 md:w-1/3 lg:w-3/12 '>
 <div className="client p-2  ">
 <img className='  rounded-2xl w-full '  src={honda} alt="" />
 </div>
