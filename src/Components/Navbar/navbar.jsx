@@ -6,12 +6,19 @@ export default function navbar() {
   return (
     <>
     <div className="drawer raleway   z-50  ">
-  <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+  <input id="my-drawer-3" type="checkbox" className="drawer-toggle " />
   <div className="drawer-content flex flex-col">
     {/* Navbar */}
     <div className="navbar   fixed top-0 z-2 bg-gradient-to-br  from-[rgba(0,0,0,0.5)] to-[#0c3e36] text-white">
-      <div className="flex-none lg:hidden">
-        <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+ 
+      <div className="mx-2 flex-1 px-2  ">
+         <a href='/#' 
+        className=' text-2xl  md:text-4xl flex content-center items-center '> <img data-aos="fade-down" data-aos-duration="1000"
+         data-aos-delay="500"
+         src={logo} className=' md:h-[70px] md:w-[70px] h-[50px] w-[50px] '    alt="logo"/></a> 
+        </div>
+        <div className="flex-none lg:hidden ">
+        <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -27,13 +34,7 @@ export default function navbar() {
           </svg>
         </label>
       </div>
-      <div className="mx-2 flex-1 px-2">
-         <a href='/#' 
-        className=' text-2xl  md:text-4xl flex content-center items-center '> <img data-aos="fade-down" data-aos-duration="1000"
-         data-aos-delay="500"
-         src={logo} className=' md:h-[70px] md:w-[70px] h-[50px] w-[50px] '    alt="logo"/></a> 
-        </div>
-      <div className="hidden flex-none lg:block ">
+      <div className="hidden flex-none lg:block  ">
         <ul className="menu menu-horizontal  text-white">
           {/* Navbar menu content here */}
           <li><a href="/#" className='text-xl hover:text-[#125e51] hover:duration-500 
@@ -54,8 +55,8 @@ export default function navbar() {
    
     
   </div>
-  <div className="drawer-side z-10">
-    <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+  <div className="drawer-side z-10 ">
+    <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay "></label>
     <ul className="menu bg-black text-white min-h-full w-80 p-4  ">
       {/* Sidebar content here */}
     <li>
