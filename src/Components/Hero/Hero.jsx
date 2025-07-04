@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="ml-6">
        
             <h1   className="text-3xl mb-5 font-bold  md:text-9xl text-white ">SPIDER <br />AGENCY </h1>
-            <h6 className='md:text-2xl text-md  mb-5 font-semibold  text-white'>Specialized in Marketing and Ads  </h6>
+            <h6 className='md:text-2xl text-xs  mb-5 font-semibold  text-white'>Digital marketing services, visual content creation, media production services</h6>
             
    
         </div>
