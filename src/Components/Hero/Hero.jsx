@@ -16,9 +16,9 @@ export default function Hero() {
       <div className="relative flex flex-wrap  items-center justify-start    w-full h-[50vh] md:h-[50vh] lg:h-[100vh]">
         <div className="ml-6">
        
-            <h1   className="text-3xl mb-5 font-bold  md:text-9xl text-white ">SPIDER <br />AGENCY </h1>
-            <h6 className='md:text-2xl text-[10px]  mb-5 font-semibold  text-white'>Digital marketing services, visual content creation, media production services</h6>
-            
+            <h1   className="text-3xl mb-2 font-bold  md:text-9xl text-white ">SPIDER <br />AGENCY </h1>
+            <h6 className='md:text-2xl text-[10px]  mb-5 font-semibold  text-white'>Digital marketing services,visual content creation,<br />  media production services</h6>
+            <button className='rounded-full px-2 text-[8px] hover:text-[#125e51] fa-beat-fade font-extrabold   hover:bg-white  transition ease-in-out hover:transition-all hover:duration-500  py-2 border-[#125e51] border  text-white'>Get Started</button>
    
         </div>
       </div>
