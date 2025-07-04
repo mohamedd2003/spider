@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 export default function navbar() {
   return (
     <>
-    <div className="drawer raleway fixed top-0 z-50  ">
+    <div className="drawer raleway   z-50  ">
   <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col">
     {/* Navbar */}
-    <div className="navbar   fixed top-0 z-2 bg-black text-white">
+    <div className="navbar   fixed top-0 z-2 bg-gradient-to-tr  from-[rgba(0,0,0,0.5)] to-[#0c3e36] text-white">
       <div className="flex-none lg:hidden">
         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
           <svg
@@ -34,14 +34,20 @@ export default function navbar() {
          src={logo} className=' md:h-[70px] md:w-[70px] h-[50px] w-[50px] '    alt="logo"/>der</a> 
         </div>
       <div className="hidden flex-none lg:block ">
-        <ul className="menu menu-horizontal bg-black text-white">
+        <ul className="menu menu-horizontal  text-white">
           {/* Navbar menu content here */}
-          <li><a href="/#" className='text-xl'>Home</a></li>
-          <li><a href="/#About" className='text-xl'>About</a></li>
-          <li><a href="/#services" className='text-xl'>Services</a></li>
-          <li><a href="/#ourwork" className='text-xl'>Our Work</a></li>
-          <li><a href="/#clients" className='text-xl'>Clients</a></li>
-          <li><a href="/#contact" className='text-xl'>Contact</a></li>
+          <li><a href="/#" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Home</a></li>
+          <li><a href="/#About" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>About</a></li>
+          <li><a href="/#services" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Services</a></li>
+          <li><a href="/#ourwork" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Our Work</a></li>
+          <li><a href="/#clients" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Clients</a></li>
+          <li><a href="/#contact" className='text-xl hover:text-[#125e51] hover:duration-500 
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Contact</a></li>
         </ul>
       </div>
     </div>
