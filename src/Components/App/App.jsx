@@ -8,7 +8,6 @@ const Photos = React.lazy(() => import('../../Pages/Photos'));
 const Designs = React.lazy(() => import('../../Pages/Designs'));
 const Campaigns = React.lazy(() => import('../../Pages/Campaigns'));
 const NotFound = React.lazy(() => import('../../Pages/NotFound'));
-const ClientDetail = React.lazy(() => import('../../Pages/ClientDetail'));
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -34,10 +33,7 @@ const routes = createBrowserRouter([
         path: "campaigns",
         element: <Campaigns/>
       },
-      {
-        path: "clients/:clientId",
-        element: <ClientDetail/>
-      },
+     
       {
         path: '*',
         element: <NotFound/>

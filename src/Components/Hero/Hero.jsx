@@ -3,11 +3,13 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section id='#' className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section id='#' className="relative h-[50vh] md:h-[50vh] lg:h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Video Background for Mobile/Tablet */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0 md:hidden"
-        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751582736/0704_siebek.mp4"
+        className="absolute inset-0 w-full h-[50%] object-fit z-0 md:hidden"
+        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
+
+       // src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751582736/0704_siebek.mp4"
         autoPlay
         loop
         muted
@@ -23,9 +25,9 @@ export default function Hero() {
         playsInline
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10 h-[50vh] md:h-[50vh] lg:h-[100vh]" >
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
+      <div className="relative z-20 flex flex-col items-center justify-center w-full h-[50vh] md:h-[50vh] lg:h-[100vh]">
         <div className="hero-content text-neutral-content text-center flex flex-col items-center justify-center h-full">
           <div className="max-w-md">
             <h1   className="text-2xl mb-5 font-bold  md:text-4xl text-white ">
@@ -38,6 +40,7 @@ export default function Hero() {
               text-white  bg-[#125e51]  border-[#125e51]">Get Started</a>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
