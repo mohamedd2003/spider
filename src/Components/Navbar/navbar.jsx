@@ -9,7 +9,7 @@ export default function navbar() {
   <input id="my-drawer-3" type="checkbox" className="drawer-toggle " />
   <div className="drawer-content flex flex-col">
     {/* Navbar */}
-    <div className="navbar    z-2 bg-gradient-to-br  from-[rgba(0,0,0,0.5)] to-[#0c3e36] text-white">
+    <div className="navbar   sticky   z-2 bg-gradient-to-br  from-[rgba(0,0,0,0.5)] to-[#0c3e36] text-white">
  
       <div className="mx-2 flex-1 px-2  ">
          <a href='/#' 
