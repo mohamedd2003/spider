@@ -85,8 +85,7 @@ export default function ClientDetail() {
 
   return (
     <div className="w-[95%] max-w-6xl mx-auto py-10">
-      <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-800 drop-shadow">{client.name}</h1>
-      <section className="mb-10 bg-white rounded-xl shadow p-6">
+      <section className="mb-10 bg-white rounded-xl shadow p-6 mt-14">
         <h2 className="text-2xl font-bold mb-3 text-main">Description</h2>
         <p className="text-lg text-gray-700 leading-relaxed">{client.description}</p>
       </section>
@@ -106,7 +105,7 @@ export default function ClientDetail() {
               >
                 <video
                   src={video}
-                  className="w-full h-auto object-cover rounded-lg"
+                  className="w-full h-[250px] object-cover rounded-lg"
                   controls
                   preload="metadata"
                   onError={e => { e.target.poster = ''; e.target.parentNode.innerHTML = '<div class=\'text-white text-center py-8\'>Video failed to load</div>'; }}
