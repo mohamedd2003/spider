@@ -4,13 +4,12 @@ import React from 'react'
 export default function Hero() {
   return (
     <section id='#' className="relative h-[50vh] md:h-[50vh] lg:h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Video Background for Mobile/Tablet */}
-      <img
-
-    alt="about us image"
-    src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751580564/IMG_8634_cmnjsj.webp"
-    className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-  />
+         <img
+  
+  alt="about us image"
+  src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751664529/new_fvaumb.jpg"
+  className="h-full w-full  bg-cover bg-no-repeat "
+/>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10 h-[50vh] md:h-[50vh] lg:h-[100vh]" >
       {/* Content */}
