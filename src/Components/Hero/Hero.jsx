@@ -5,25 +5,12 @@ export default function Hero() {
   return (
     <section id='#' className="relative h-[50vh] md:h-[50vh] lg:h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Video Background for Mobile/Tablet */}
-      <video
-        className="absolute inset-0 w-full h-[50%] object-fit z-0 md:hidden"
-        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
+      <img
 
-       // src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751582736/0704_siebek.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      {/* Video Background for Desktop/Large Screens */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
-        src="https://res.cloudinary.com/dp2kkgobw/video/upload/v1751577435/video01_i1nuhw.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+    alt="about us image"
+    src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751580564/IMG_8634_cmnjsj.webp"
+    className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+  />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10 h-[50vh] md:h-[50vh] lg:h-[100vh]" >
       {/* Content */}
