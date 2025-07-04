@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section id='#' className="relative h-[50vh] md:h-[50vh] lg:h-screen w-full overflow-hidden flex items-center justify-center">
+    <section id='#' className="relative h-[40vh] md:h-[50vh] lg:h-screen w-full overflow-hidden flex items-center justify-center">
          <img
   
   alt="about us image"
