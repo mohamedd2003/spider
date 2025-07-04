@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function navbar() {
   return (
     <>
-    <div className="drawer raleway fixed top-0 z-50 ">
+    <div className="drawer raleway fixed top-0 z-50  ">
   <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col">
     {/* Navbar */}

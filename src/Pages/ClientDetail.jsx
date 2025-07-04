@@ -96,24 +96,22 @@ export default function ClientDetail() {
         {client.videos.length === 0 ? (
           <p className="text-gray-500">No videos available.</p>
         ) : (
-          <div className="flex flex-wrap gap-6 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center min-h-[200px]">
             {client.videos.map((video, i) => (
               <div
                 key={i}
-                className="w-full sm:w-[320px] md:w-[400px] rounded-lg shadow-lg transition-transform hover:scale-105 bg-black cursor-pointer"
-                style={{ aspectRatio: '16/9' }}
+                className="w-full sm:w-[320px] md:w-[400px] rounded-lg shadow-lg transition-transform hover:scale-105 bg-black cursor-pointer mb-4"
+                style={{ aspectRatio: '16/9', maxWidth: '100%' }}
                 onClick={() => openModal('video', i)}
               >
                 <video
                   src={video}
-                  className="w-full h-full object-cover rounded-lg"
-                  style={{ pointerEvents: 'none' }}
-                  muted
+                  className="w-full h-auto object-cover rounded-lg"
+                  controls
                   preload="metadata"
+                  onError={e => { e.target.poster = ''; e.target.parentNode.innerHTML = '<div class=\'text-white text-center py-8\'>Video failed to load</div>'; }}
+                  style={{ background: '#000' }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity">
-                  <span className="text-white text-2xl font-bold">▶</span>
-                </div>
               </div>
             ))}
           </div>
