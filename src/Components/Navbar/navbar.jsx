@@ -51,8 +51,8 @@ export default function navbar() {
         </ul>
       </div>
     </div>
-    {/* Page content here */}
-    Content goes here
+   
+    
   </div>
   <div className="drawer-side z-10">
     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
