@@ -28,12 +28,12 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
         <div className="hero-content text-neutral-content text-center flex flex-col items-center justify-center h-full">
           <div className="max-w-md">
-            <h1 data-aos="fade" data-aos-duration="1000" className="text-2xl mb-5 font-bold  md:text-4xl text-white ">
+            <h1   className="text-2xl mb-5 font-bold  md:text-4xl text-white ">
               Understand User Flow and
               <strong className="text-[#125e51]"> Increase </strong>
               Conversions
             </h1>
-            <a href="#services"  data-aos="fade-up" data-aos-duration="1000"  
+            <a href="#services"     
               className=" px-3 py-2 md:px-5  rounded-full hover:bg-white hover:text-[#125e51] raleway duration-200
               text-white  bg-[#125e51]  border-[#125e51]">Get Started</a>
           </div>
