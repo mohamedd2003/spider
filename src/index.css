@@ -114,12 +114,19 @@
 }
 
 
-
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* -50% كفاية لأن الصور متكررة مرتين */
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }  /* عشان الصور مكرَّرة مرتين */
 }
 
-.animate-marquee {
-  animation: marquee 7s linear infinite;
+.marquee-track {
+  animation: marquee 8s linear infinite;
+  will-change: transform;      /* ← يفعّل الـ GPU */
+  transform: translateZ(0);    /* ← hack خفيف لثبات الأنيميشن */
+}
+
+/* حجم أصغر وسرعة أبطأ على الموبايل لتقليل الجهد */
+@media (max-width: 640px) {
+  .logo-img  { height: 4.5rem; }   /* h‑18 تقريبًا */
+  .marquee-track { animation-duration: 30s; }
 }
