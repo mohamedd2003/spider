@@ -119,7 +119,7 @@
   to   { transform: translateX(-50%); }  /* عشان الصور مكرَّرة مرتين */
 }
 
-.marquee-track {
+.animate-marquee {
   animation: marquee 8s linear infinite;
   will-change: transform;      /* ← يفعّل الـ GPU */
   transform: translateZ(0);    /* ← hack خفيف لثبات الأنيميشن */

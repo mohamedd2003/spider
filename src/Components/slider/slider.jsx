@@ -10,21 +10,21 @@ import img8 from "../../assets/logo/8.png";
 import img9 from "../../assets/logo/9.png";
 import img10 from "../../assets/logo/10.png";
 export default function slider() {
-  const logos = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
-
+  
   return (
     <>
- <section className="overflow-hidden w-full">
-  <div className="marquee-track whitespace-nowrap flex w-max">
-    {logos.concat(logos).map((src, i) => (
-      <img
-        key={i}                /* ← ثابت مش random  */
-        src={src}
-        loading="lazy"
-        alt={`logo-${i % logos.length}`}
-        className="logo-img inline-block mx-3"
-      />
-    ))}
+    <section className="overflow-hidden w-full">
+  <div className="animate-marquee whitespace-nowrap flex w-max">
+    {[...Array(2)].flatMap(() =>
+      [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10].map((img, i) => (
+        <img
+         
+          src={img}
+          className="h-24 md:h-48 object-contain inline-block mx-4"
+          alt={`logo${i + 1}`}
+        />
+      ))
+    )}
   </div>
 </section>
 
