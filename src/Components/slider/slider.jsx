@@ -25,6 +25,36 @@ export default function slider() {
     <img src={img8}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo08" />
     <img src={img9}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo09" />
     <img src={img10} className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo10" />
+  <img src={img1}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo01" />
+    <img src={img2}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo02" />
+    <img src={img3}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo03" />
+    <img src={img4}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo04" />
+    <img src={img5}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo05" />
+    <img src={img6}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo06" />
+    <img src={img7}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo07" />
+    <img src={img8}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo08" />
+    <img src={img9}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo09" />
+    <img src={img10} className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo10" />
+  <img src={img1}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo01" />
+    <img src={img2}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo02" />
+    <img src={img3}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo03" />
+    <img src={img4}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo04" />
+    <img src={img5}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo05" />
+    <img src={img6}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo06" />
+    <img src={img7}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo07" />
+    <img src={img8}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo08" />
+    <img src={img9}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo09" />
+    <img src={img10} className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo10" />
+  <img src={img1}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo01" />
+    <img src={img2}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo02" />
+    <img src={img3}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo03" />
+    <img src={img4}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo04" />
+    <img src={img5}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo05" />
+    <img src={img6}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo06" />
+    <img src={img7}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo07" />
+    <img src={img8}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo08" />
+    <img src={img9}  className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo09" />
+    <img src={img10} className="h-24 md:h-48 object-contain inline-block mx-4" alt="logo10" />
   </div>
 </section>
 
