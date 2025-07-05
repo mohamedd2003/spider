@@ -9,39 +9,25 @@ import img7 from "../../assets/logo/7.png";
 import img8 from "../../assets/logo/8.png";
 import img9 from "../../assets/logo/9.png";
 import img10 from "../../assets/logo/10.png";
-export default function slider({lineStyle}) {
+export default function slider() {
   
   return (
     <>
-    
-    <section>
-        <div className="   w-full ">
-          <div className="flex items-center  animate-marquee ">
-          <img src={img1}  className="h-32 md:h-48 object-contain inline" alt="logo01" />
-<img src={img2}  className="h-32 md:h-48 object-contain inline" alt="logo02" />
-<img src={img3}  className="h-32 md:h-48 object-contain inline" alt="logo03" />
-<img src={img4}  className="h-32 md:h-48 object-contain inline" alt="logo04" />
-<img src={img5}  className="h-32 md:h-48 object-contain inline" alt="logo05" />
-<img src={img6}  className="h-32 md:h-48 object-contain inline" alt="logo06" />
-<img src={img7}  className="h-32 md:h-48 object-contain inline" alt="logo07" />
-<img src={img8}  className="h-32 md:h-48 object-contain inline" alt="logo08" />
-<img src={img9}  className="h-32 md:h-48 object-contain inline" alt="logo09" />
-<img src={img10} className="h-32 md:h-48 object-contain inline" alt="logo10" />
+    <section className="overflow-hidden w-full">
+  <div className="animate-marquee whitespace-nowrap flex w-max">
+    {[...Array(2)].flatMap(() =>
+      [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10].map((img, i) => (
+        <img
+          key={i + '-' + Math.random()}
+          src={img}
+          className="h-24 md:h-48 object-contain inline-block mx-4"
+          alt={`logo${i + 1}`}
+        />
+      ))
+    )}
+  </div>
+</section>
 
-<img src={img1}  className="h-32 md:h-48 object-contain inline" alt="logo01" />
-<img src={img2}  className="h-32 md:h-48 object-contain inline" alt="logo02" />
-<img src={img3}  className="h-32 md:h-48 object-contain inline" alt="logo03" />
-<img src={img4}  className="h-32 md:h-48 object-contain inline" alt="logo04" />
-<img src={img5}  className="h-32 md:h-48 object-contain inline" alt="logo05" />
-<img src={img6}  className="h-32 md:h-48 object-contain inline" alt="logo06" />
-<img src={img7}  className="h-32 md:h-48 object-contain inline" alt="logo07" />
-<img src={img8}  className="h-32 md:h-48 object-contain inline" alt="logo08" />
-<img src={img9}  className="h-32 md:h-48 object-contain inline" alt="logo09" />
-<img src={img10} className="h-32 md:h-48 object-contain inline" alt="logo10" />
-          </div>
-        </div>
-
-      </section>
     </>
   )
 }
