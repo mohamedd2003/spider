@@ -13,7 +13,7 @@ export default function About() {
 
      
           
-<ul className=" font-thin text-white  list-disc  text-[14px] md:text-[17px]  ">
+<ul className=" font-thin text-white   text-[14px] md:text-[17px]  ">
   <li  data-aos-duration="1000" data-aos="fade-right" className='mt-3 fo'  >We focus on delivering high-quality, unique content that earns client trust.
 </li>
 <li  data-aos-duration="1000" data-aos-delay="350" data-aos="fade-left" className='mt-3'>Our team of experts crafts impactful messages, builds strong brand identities,
