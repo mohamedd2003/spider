@@ -8,6 +8,7 @@ const Photos = React.lazy(() => import('../../Pages/Photos'));
 const Designs = React.lazy(() => import('../../Pages/Designs'));
 const Campaigns = React.lazy(() => import('../../Pages/Campaigns'));
 const NotFound = React.lazy(() => import('../../Pages/NotFound'));
+import { Analytics } from "@vercel/analytics/react";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -48,7 +49,7 @@ function App() {
     <>
     <Suspense fallback={<Lazy/>}>
     <RouterProvider router={routes} />
-    
+    <Analytics/>
     </Suspense>
     </>
   )
