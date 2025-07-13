@@ -1,9 +1,9 @@
 import React from 'react'
-import aboutImg from "../../assets/About.jpg"
+import CurvedLoop from '../../../reactbits/CurvedLoop/CurvedLoop';
 export default function About() {
   return (
     <section >
- 
+
   <section   className="overflow-hidden  sm:grid sm:grid-cols-2 sm:items-center lato">
   <div className="p-8 md:p-12 lg:px-16 lg:py-24">
     <div className="mx-auto max-w-xl  ltr:sm:text-left ">
@@ -46,6 +46,15 @@ we bring brands to life in ways that are bold, engaging, and unforgettable.
     className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
   />
 </section>
+<CurvedLoop 
+  marqueeText="Be ✦ Creative ✦ With ✦ Spider ✦ Agency ✦"
+  speed={3}
+  curveAmount={100}
+  direction="right"
+  interactive={true}
+  className="custom-text-style"
+/>
+
 </section>
   )
 }
