@@ -15,6 +15,14 @@ const clients = [
     videos: [
       "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757511354/boom_meat_kxlfxs.mp4",
       "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757511642/C0315_vl0pct.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757512156/healthy_sp_qu2bo1.mp4"
+    ],
+  },
+  {
+    name: "Premier",
+    videos: [
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757512669/Me3margy_Podcast_Promo_ltv0dc.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757512851/Windoorex_Teaser_jib7hz.mov"
     ],
   },
 ];
@@ -38,7 +46,7 @@ export default function Videos() {
           <div key={index} className="w-[95%] mx-auto">
             {/* Brand Name */}
             <div className="text-center mb-10">
-              <h2 className="text-4xl md:text-5xl font-bold font-serif text-gray-900 uppercase">
+              <h2 className="text-4xl md:text-5xl font-light italic text-gray-900 uppercase">
                 {client.name}
               </h2>
               <div className="w-24 h-1 bg-main mx-auto mt-3 rounded-full shadow-md"></div>
@@ -51,13 +59,14 @@ export default function Videos() {
                   key={i}
                   className="w-full md:w-1/2 px-2 mb-4 flex justify-center"
                 >
-                 <div className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-[500px] hover:shadow-2xl transition-shadow">
-  <video
+<div className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-[500px] hover:shadow-2xl transition-shadow">
+  <video                 
     src={video}
     controls
-      className="w-full max-h-[300px] object-contain"
+    className="w-full h-[300px] object-cover "
   />
 </div>
+
 
                 </div>
               ))}
