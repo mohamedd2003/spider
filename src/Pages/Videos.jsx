@@ -78,13 +78,11 @@ export default function Videos() {
                   className="w-full md:w-1/2  mb-4 flex justify-center"
                 >
 <div className=" rounded-4xl  w-full max-w-[650px] ">
-  <div className="aspect-video">
     <video
       src={video}
       controls
       className="w-full h-full object-cover"
     />
-  </div>
 </div>
 
 
