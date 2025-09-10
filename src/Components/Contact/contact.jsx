@@ -10,7 +10,7 @@ export default function Contact() {
 
     emailjs
       .sendForm("service_tbi8mb8", "template_4x3hcez", form.current, {
-        publicKey: 'sjjHZ5aS8nLByNaSP',
+        publicKey: 'zXDQtX0M6jFaqG_8a',
       })
       .then(
         () => {
@@ -23,6 +23,8 @@ export default function Contact() {
           });
         },
         (error) => {
+          console.log(error );
+          
           toast.error('There was an Error Sending Message', {
             style: {
               borderRadius: '10px',

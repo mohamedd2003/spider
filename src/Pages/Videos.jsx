@@ -11,10 +11,10 @@ const clients = [
     ],
   },
   {
-    name: "INFNIX",
+    name: "Healthy Corner",
     videos: [
-      "https://res.cloudinary.com/demo/video/upload/w_600/cat.mp4",
-      "https://res.cloudinary.com/demo/video/upload/w_600/sample.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757511354/boom_meat_kxlfxs.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757511642/C0315_vl0pct.mp4",
     ],
   },
 ];
