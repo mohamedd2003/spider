@@ -1,15 +1,18 @@
 import React from "react";
-import ReactPlayer from "react-player";
 
 
 const clients = [
   {
-    name: "BIAC",
+    name: "DMC ADS",
     videos: [
-      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757510714/BIAC_Promo_tsn1ez.mp4",
-      
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757514186/V1_%D8%A7%D9%84%D9%85%D8%B0%D8%A7%D9%83%D8%B1%D8%A9_1_wyib36.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757514754/El_So7ooR_1_tbc2er.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757514722/V2___%D8%A7%D9%84%D9%85%D8%B0%D8%A7%D9%83%D8%B1%D8%A9_%D9%85%D8%B1%D9%88%D8%A9_gkj4w5.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757514826/%D8%AE%D8%A7%D9%84%D9%88_%D9%88_%D8%A7%D9%84%D8%B3%D8%AD%D9%88%D8%B1_sv3ysn.mp4",
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757514759/MAIN_Social_2_elvpy6.mp4"
     ],
   },
+
   {
     name: "Healthy Corner",
     videos: [
@@ -19,12 +22,20 @@ const clients = [
     ],
   },
   {
+    name: "BIAC",
+    videos: [
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757510714/BIAC_Promo_tsn1ez.mp4",
+      
+    ],
+  },
+ 
+  {
     name: "Premier",
     videos: [
       "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757512669/Me3margy_Podcast_Promo_ltv0dc.mp4",
-      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757512851/Windoorex_Teaser_jib7hz.mov"
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757513179/Windoorex_Teaser_jib..._-_Manage_Asset_-_Assets_DAM_mgmhwl.mp4"
     ],
-  },
+},
 ];
 
 export default function Videos() {
@@ -53,17 +64,17 @@ export default function Videos() {
             </div>
 
             {/* Videos Grid */}
-            <div className="flex flex-wrap -mx-2">
+            <div className="flex flex-wrap mx-2">
               {client.videos.map((video, i) => (
                 <div
                   key={i}
-                  className="w-full md:w-1/2 px-2 mb-4 flex justify-center"
+                  className="w-full md:w-1/2  mb-4 flex justify-center"
                 >
-<div className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-[500px] hover:shadow-2xl transition-shadow">
+<div className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-[650px] hover:shadow-2xl transition-shadow">
   <video                 
     src={video}
     controls
-    className="w-full h-[300px] object-cover "
+    className="w-full h-[500px] object-cover "
   />
 </div>
 
