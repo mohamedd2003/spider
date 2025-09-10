@@ -81,7 +81,7 @@ export default function Videos() {
     <video
       src={video}
       controls
-      className="w-full h-full object-cover"
+      className="w-full h-[300px] object-cover"
     />
 </div>
 
