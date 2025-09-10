@@ -36,6 +36,13 @@ const clients = [
       "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757513179/Windoorex_Teaser_jib..._-_Manage_Asset_-_Assets_DAM_mgmhwl.mp4"
     ],
 },
+  {
+    name: "Podcast Hr",
+    videos: [
+      "https://res.cloudinary.com/dp2kkgobw/video/upload/v1757515154/%D9%84%D9%88_%D8%AC%D8%A7%D9%84%D9%83_%D8%B9%D8%B1%D8%B6_phz7ss.mp4",
+    ],
+},
+  
 ];
 
 export default function Videos() {
@@ -70,13 +77,16 @@ export default function Videos() {
                   key={i}
                   className="w-full md:w-1/2  mb-4 flex justify-center"
                 >
-<div className=" shadow-lg rounded-xl overflow-hidden w-full max-w-[650px] hover:shadow-2xl transition-shadow">
-  <video                 
-    src={video}
-    controls
-    className="w-full h-[500px] object-cover "
-  />
+<div className="shadow-lg rounded-xl overflow-hidden w-full max-w-[650px] hover:shadow-2xl transition-shadow">
+  <div className="aspect-video">
+    <video
+      src={video}
+      controls
+      className="w-full h-full object-cover"
+    />
+  </div>
 </div>
+
 
 
                 </div>
