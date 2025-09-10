@@ -130,3 +130,6 @@
   .logo-img  { height: 4.5rem; }   /* h‑18 تقريبًا */
   .marquee-track { animation-duration: 30s; }
 }
+.bg-main{
+  background-color: #125e51;
+}

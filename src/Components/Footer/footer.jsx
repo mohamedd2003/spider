@@ -31,7 +31,7 @@ export default function Footer() {
               </p>
 
               <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
-                <li>Sunday to Thursday: 9am - 6pm</li>
+                <li>Sunday to Thursday : 9 AM - 6 PM</li>
                 {/* <li>Weekend: 10am - 3pm</li> */}
               </ul>
 
@@ -44,7 +44,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Gmail</span>
-                    <i class="fa-solid fa-envelope  fa-lg"></i>
+                    <i className="fa-solid fa-envelope  fa-lg"></i>
                   </a>
                 </li>
                 <li>
@@ -92,31 +92,31 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="flex flex wrap content-between space-x-6" >
+            <div className="flex  wrap content-between space-x-6" >
               <div className="col-5">
                 <div className='p-1'>
                   <a href='#services' className="font-medium text-gray-900 dark:text-white">Services</a>
 
                   <ul className="mt-6 space-y-4 text-sm">
                     <li>
-                      <a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        Branding
+                      <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                        Online Marketing
 
                       </a>
                     </li>
 
                     <li>
-                      <a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                      <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
 
-                        Digital Marketing
+                      Offline Marketing
 
                       </a>
                     </li>
 
 
                     <li>
-                      <a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        Web Development
+                      <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                        Website Development
 
                       </a>
                     </li>
