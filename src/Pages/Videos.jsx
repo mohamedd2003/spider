@@ -77,7 +77,7 @@ export default function Videos() {
                   key={i}
                   className="w-full md:w-1/2  mb-4 flex justify-center"
                 >
-<div className="shadow-lg rounded-xl overflow-hidden w-full max-w-[650px] hover:shadow-2xl transition-shadow">
+<div className=" rounded-4xl  w-full max-w-[650px] ">
   <div className="aspect-video">
     <video
       src={video}
