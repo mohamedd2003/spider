@@ -77,12 +77,12 @@ export default function Videos() {
                   key={i}
                   className="w-full md:w-1/2  mb-4 flex justify-center"
                 >
-<div className=" rounded-4xl  w-full max-w-[650px] ">
-    <video
-      src={video}
-      controls
-      className="w-full max-h-[300px] object-cover"
-    />
+                 <div className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-[500px] hover:shadow-2xl transition-shadow">
+  <video
+    src={video}
+    controls
+      className="w-full max-h-[300px] object-contain"
+  />
 </div>
 
 
