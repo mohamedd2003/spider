@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function JoinUs() {
+  const [isLoading, setIsLoading] = useState(false);
+  
   const formik = useFormik({
     initialValues: {
       gender: "",
@@ -24,6 +26,8 @@ export default function JoinUs() {
       image: null,
     },
     onSubmit: async (values, { resetForm }) => {
+      setIsLoading(true);
+      
       try {
         const formData = new FormData();
         Object.entries(values).forEach(([key, value]) => {
@@ -37,15 +41,23 @@ export default function JoinUs() {
             headers: { "Content-Type": "multipart/form-data" },
           }
         )
-if(data.success){
-    window.location.replace("/")
-}
-
-        toast.success("Form submitted successfully!");
-        resetForm();
+        
+        if(data.success){
+          toast.success("Form submitted successfully! Redirecting in 5 seconds...");
+          resetForm();
+          
+          // Wait 5 seconds before redirecting
+          setTimeout(() => {
+            setIsLoading(false);
+            window.location.replace("/");
+          }, 3500);
+        } else {
+          setIsLoading(false);
+          toast.error("Something went wrong. Please try again.");
+        }
       } catch (err) {
-       
-        toast.error(err.response.data.message);
+        setIsLoading(false);
+        toast.error(err.response?.data?.message || "Failed to submit form");
       }
     },
   });
@@ -311,9 +323,21 @@ if(data.success){
             <div className="mt-8 pt-6 border-t border-gray-200">
               <button
                 type="submit"
-                className="w-full bg-[#125e51] text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                disabled={isLoading}
+                className={`w-full py-4 px-6 rounded-lg transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
+                  isLoading
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-[#125e51] hover:bg-[#0f4d43] text-white'
+                }`}
               >
-                Submit Application
+                {isLoading ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    <span>Submitting Application...</span>
+                  </div>
+                ) : (
+                  'Submit Application'
+                )}
               </button>
               <p className="text-center text-sm text-gray-500 mt-3">
                 By submitting this form, you agree to our terms and conditions
