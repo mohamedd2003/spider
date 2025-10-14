@@ -133,6 +133,27 @@ export default function Contact() {
                 Email address
               </label>
             </div>
+            
+            {/* Budget Range */}
+            <div className="relative z-0 w-full mb-5 group">
+              <select
+                name="budget"
+                id="budget"
+                className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
+                required
+              >
+                <option value="" disabled selected className="text-white">Select your budget range</option>
+                <option value="under 50k" className="text-main">Under 50K</option>
+                <option value="from 50k to 100k" className="text-main">50K - 100K</option>
+                <option value="Above 100k" className="text-main">Above 100K</option>
+              </select>
+              <label
+                htmlFor="budget"
+                className="peer-focus:font-medium absolute text-md text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Budget Range
+              </label>
+            </div>
 
             {/* Message */}
             <textarea

@@ -82,7 +82,7 @@ export default function Videos() {
     src={video}
     controls
     playsInline
-      className="w-full max-h-[300px] object-cover"
+      className="w-full max-h-[300px] object-contain"
   />
 </div>
 

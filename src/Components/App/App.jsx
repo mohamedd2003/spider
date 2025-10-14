@@ -9,6 +9,7 @@ const Designs = React.lazy(() => import('../../Pages/Designs'));
 const Campaigns = React.lazy(() => import('../../Pages/Campaigns'));
 const NotFound = React.lazy(() => import('../../Pages/NotFound'));
 import { Analytics } from "@vercel/analytics/react";
+import JoinUs from "../JoinUs/JoinUs";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ const routes = createBrowserRouter([
       {
         path: "campaigns",
         element: <Campaigns/>
+      },
+      {
+        path: "joinUs",
+        element: <JoinUs/>
       },
      
       {

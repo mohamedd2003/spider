@@ -5,7 +5,7 @@ export default function lazy() {
 <>
 
 <div className='w-full h-screen flex items-center justify-center'>
-<span class="loader"></span>
+<span className="loader"></span>
 </div>
 </>
   )

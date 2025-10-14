@@ -46,9 +46,14 @@ export default function navbar() {
           <li><a href="/#ourwork" className='text-xl hover:text-[#125e51] hover:duration-500 
           hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Our Work</a></li>
           <li><a href="/#clients" className='text-xl hover:text-[#125e51] hover:duration-500 
-          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Clients</a></li>
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Clients</a>
+          </li>
           <li><a href="/#contact" className='text-xl hover:text-[#125e51] hover:duration-500 
-          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Contact</a></li>
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Contact</a>
+          </li>
+          <li><a href="/joinUs" className='text-xl bg-[#125e51] hover:duration-500  rounded-full p-2
+          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Join Us</a>
+          </li>
         </ul>
       </div>
     </div>
