@@ -57,7 +57,7 @@ export default function JoinUs() {
         }
       } catch (err) {
         setIsLoading(false);
-        toast.error(err.response?.data?.message || "Failed to submit form");
+        toast.error(err.response?.data?.message );
       }
     },
   });
