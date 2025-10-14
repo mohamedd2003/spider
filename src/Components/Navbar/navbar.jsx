@@ -51,8 +51,11 @@ export default function navbar() {
           <li><a href="/#contact" className='text-xl hover:text-[#125e51] hover:duration-500 
           hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Contact</a>
           </li>
-          <li><a href="/joinUs" className='text-xl bg-[#125e51] hover:duration-500  rounded-full p-2
-          hover:border hover:rounded-full   ease-in-out hover:all transition-all hover:text-2xl'>Join Us</a>
+          <li>
+            <a href="/joinUs" className='text-xl bg-[#125e51] text-white hover:bg-[#0f4d43] hover:scale-105 hover:shadow-lg rounded-full px-4 py-2 transition-all duration-300 ease-in-out flex items-center gap-2 hover:gap-3'>
+              <i className="fa-solid fa-user-plus fa-sm"></i>
+              Join Us
+            </a>
           </li>
         </ul>
       </div>
@@ -119,8 +122,14 @@ Clients
   </li>
   <li>
     <a className="text-lg" href='/#contact' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
-   <i className="fa-solid fa-users-between-lines fa-sm"></i>
-Contact 
+      <i className="fa-solid fa-envelope fa-sm"></i>
+      Contact 
+    </a>
+  </li>
+  <li>
+    <a href="/joinUs" className='text-lg bg-[#125e51] text-white hover:bg-[#0f4d43] hover:scale-105 rounded-full px-4 py-2 transition-all duration-300 ease-in-out flex items-center gap-2' onClick={() => { document.getElementById('my-drawer-3').checked = false; }}>
+      <i className="fa-solid fa-user-plus fa-sm"></i>
+      Join Us
     </a>
   </li>
   
