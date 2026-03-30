@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useLocation } from 'react-router-dom'
 import { Sun, Moon, Menu, X, UserPlus, Globe, ArrowRight } from 'lucide-react'
 import logo from '../../assets/logo.png'
 
 export default function Navbar() {
   const { t, i18n } = useTranslation()
   const isAr = i18n.language === 'ar'
+  const location = useLocation()
+  const isHome = location.pathname === '/'
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -108,7 +111,7 @@ export default function Navbar() {
       {/* ════════════════ MOBILE — Top Bar ════════════════ */}
       <nav
         className={`fixed top-0 inset-x-0 z-50 flex lg:hidden items-center justify-between px-3 sm:px-4 py-2 w-full transition-all duration-500 ${
-          scrolled
+          scrolled || !isHome
             ? 'bg-black/90 backdrop-blur-2xl shadow-lg shadow-black/20'
             : 'bg-transparent'
         }`}

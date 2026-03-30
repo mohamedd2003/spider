@@ -12,7 +12,7 @@ export default function NotFound() {
         <p className="text-lg text-white/80 mb-8">{t('notFound.message')}</p>
         <Link
           to="/"
-          className="inline-block px-6 py-3 rounded-full bg-white text-main font-bold shadow-md hover:bg-main hover:text-white border-2 border-main transition-all duration-200"
+          className="inline-block px-6 py-3 min-h-[48px] rounded-full bg-white text-main font-bold shadow-md hover:bg-main hover:text-white border-2 border-main transition-all duration-200"
         >
           {t('notFound.returnHome')}
         </Link>
