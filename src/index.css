@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+/* ═══ Dark mode: class-based toggle for Tailwind v4 browser CDN ═══ */
+@custom-variant dark (&:where(.dark, .dark *));
+
 *{
   scroll-behavior: smooth;
 }
@@ -13,6 +18,12 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* ═══ Arabic font ═══ */
+[dir="rtl"] *,
+[lang="ar"] * {
+  font-family: "Cairo", "Raleway", sans-serif;
 }
 
 /* .loader, .loader:before {
@@ -87,49 +98,72 @@
 }
 
       
-:-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000; /* Background of the scrollbar track */
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #125e51; /* Scrollbar thumb */
-  border-radius: 10px;        /* Rounded corners */
-  border: 2px solid transparent; /* Padding around thumb */
+  background-color: #125e51;
+  border-radius: 10px;
+  border: 2px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #0e4a41; /* Slightly darker on hover */
+  background-color: #0e4a41;
+}
+
+.dark ::-webkit-scrollbar-track,
+:where(.dark, .dark *)::-webkit-scrollbar-track {
+  background: #000;
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
+  scrollbar-color: #125e51 #f1f1f1;
+}
+.dark * {
   scrollbar-color: #125e51 #000;
 }
 
 
+/* ═══ Marquee animation ═══ */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-100%); }  /* عشان الصور مكرَّرة مرتين */
+  to   { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
-  will-change: transform;      /* ← يفعّل الـ GPU */
-  transform: translateZ(0);    /* ← hack خفيف لثبات الأنيميشن */
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
-/* حجم أصغر وسرعة أبطأ على الموبايل لتقليل الجهد */
 @media (max-width: 640px) {
-  .logo-img  { height: 4.5rem; }   /* h‑18 تقريبًا */
-  .marquee-track { animation-duration: 30s; }
+  .animate-marquee { animation-duration: 25s; }
+}
+
+/* ═══ Utility classes ═══ */
+.text-main{
+  color: #125e51;
 }
 .bg-main{
   background-color: #125e51;
 }
+
+/* ═══ Dark mode body/root transitions ═══ */
+#root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark #root {
+  background-color: #0a0a0a;
+  color: #e5e7eb;
+}
+
+/* ═══ Scrollbar ═══ */

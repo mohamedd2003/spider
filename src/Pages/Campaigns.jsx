@@ -37,13 +37,13 @@ export default function Campaigns() {
   };
 
   return (
-    <section className="min-h-screen py-16 bg-gradient-to-b from-green-50 to-white">
+    <section className="min-h-screen pt-20 sm:pt-28 pb-16 bg-gradient-to-b from-green-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Main Title */}
       <div className="w-[90%] mx-auto text-center mb-16">
-        <h1 className="text-5xl md:text-6xl font-extrabold font-serif text-main mb-6 tracking-wide">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-serif text-main mb-6 tracking-wide">
           {t('campaigns.title')}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 font-light">
+        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-light">
           {t('campaigns.subtitle')}
         </p>
       </div>
@@ -54,7 +54,7 @@ export default function Campaigns() {
           <div key={campaignIndex} className="w-[90%] mx-auto">
             {/* Client Name */}
             <div className="text-center mb-10">
-              <h2 className="text-4xl md:text-5xl font-bold font-serif text-gray-900 uppercase">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-gray-900 dark:text-white uppercase">
                 {campaign.name}
               </h2>
               <div className="w-24 h-1 bg-main mx-auto mt-3 rounded-full shadow-md"></div>

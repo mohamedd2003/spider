@@ -136,22 +136,22 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16 px-4 ">
+    <section className="py-12 sm:py-16 px-3 sm:px-4">
       <div className="max-w-7xl mx-auto">
         
 
         {/* Tab Navigation - Only Titles */}
         <div className="mb-8">
-          <div className="flex flex-wrap justify-center items-center gap-2 bg-white rounded-2xl p-3 shadow-lg border border-gray-100">
+          <div className="flex flex-wrap justify-center items-center gap-2 bg-white dark:bg-gray-900 rounded-2xl p-2 sm:p-3 shadow-lg border border-gray-100 dark:border-gray-700">
             {services.map((service, index) => (
               <button
                 key={service.id}
                 onClick={() => setActiveTab(index)}
                 className={`
-                  flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 text-sm md:text-base
+                  flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2.5 sm:py-3 min-h-[44px] rounded-xl font-medium transition-all duration-300 text-xs sm:text-sm md:text-base
                   ${activeTab === index
                     ? 'bg-main text-white shadow-lg transform scale-105'
-                    : 'text-gray-700 hover:text-main hover:bg-blue-50'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-main hover:bg-blue-50 dark:hover:bg-white/10'
                   }
                   min-w-0 flex-shrink-0
                 `}
@@ -164,8 +164,8 @@ const Services = () => {
         </div>
 
         {/* Content Area with Subtitles */}
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-          <div className="p-8 md:p-12">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+          <div className="p-4 sm:p-8 md:p-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
@@ -181,7 +181,7 @@ const Services = () => {
                   <div className="p-3 bg-main text-white rounded-xl">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                     {service.title}
                   </h3>
                 </div>
@@ -200,7 +200,7 @@ const Services = () => {
                           }))
                         }
                       >
-                        <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center justify-between">
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4 flex items-center justify-between">
                           {subtitle.name}
                           <span className={`transition-transform duration-200 ml-2 ${openSubtitle[activeTab] === subtitleIndex ? 'rotate-90' : ''}`}>
                             <ChevronRight className="w-4 h-4 text-main" />
@@ -218,10 +218,10 @@ const Services = () => {
                           {subtitle.content.map((item, itemIndex) => (
                             <div
                               key={itemIndex}
-                              className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200"
+                              className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-white/5 rounded-lg hover:bg-blue-50 dark:hover:bg-white/10 transition-colors duration-200"
                             >
                               <ChevronRight className="w-4 h-4 text-main mt-1 flex-shrink-0" />
-                              <span className="text-gray-700 leading-relaxed text-sm">{item}</span>
+                              <span className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{item}</span>
                             </div>
                           ))}
                         </div>

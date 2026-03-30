@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ArrowLeft, FolderOpen, Folder, Play, Video, PlayCircle, Hash, Monitor } from "lucide-react";
 
 const clients = [
   {
@@ -74,25 +75,25 @@ export default function Videos() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-100 p-4 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-100 dark:from-gray-950 dark:to-gray-900 px-3 sm:px-4 md:px-8 pt-20 sm:pt-28 pb-8">
       {/* Header */}
       <div className="text-center mb-8 md:mb-12">
         <h1 className="text-4xl md:text-6xl font-bold text-[#125e51] mb-4">
           {t('videos.title')}
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           {t('videos.subtitle')}
         </p>
       </div>
 
-      {/* Back Button - Only show when viewing videos */}
+      {/* Back Button */}
       {(openFolder !== null || selectedVideo) && (
-        <div className="mb-6">
+        <div className="mb-6 max-w-7xl mx-auto">
           <button
             onClick={handleBackToFolders}
-            className="flex items-center space-x-2 px-4 py-2 bg-[#125e51] text-white rounded-lg hover:bg-[#0f4d43] transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#125e51] text-white rounded-lg hover:bg-[#0f4d43] transition-colors"
           >
-            <i className="fas fa-arrow-left"></i>
+            <ArrowLeft size={16} />
             <span>{t('videos.backToFolders')}</span>
           </button>
         </div>
@@ -102,9 +103,9 @@ export default function Videos() {
       <div className="max-w-7xl mx-auto">
         {selectedVideo ? (
           /* Video Player View */
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
             <div className="p-4 md:p-6 bg-[#125e51] text-white">
-              <h2 className="text-2xl md:text-3xl font-bold">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
                 {clients[selectedVideo.clientIndex].name} - {t('videos.video')} {selectedVideo.videoIndex + 1}
               </h2>
             </div>
@@ -154,38 +155,36 @@ export default function Videos() {
               
               {/* Other videos from same client */}
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
                   {t('videos.moreFrom')} {clients[selectedVideo.clientIndex].name}
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {clients[selectedVideo.clientIndex].videos.map((video, videoIndex) => (
                     <div
                       key={videoIndex}
                       onClick={() => handleVideoClick(selectedVideo.clientIndex, videoIndex)}
-                      className={`relative aspect-video bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all cursor-pointer ${
+                      className={`relative aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-all cursor-pointer ${
                         selectedVideo.videoIndex === videoIndex ? 'ring-4 ring-[#125e51]' : ''
                       }`}
                     >
-                      {/* Thumbnail using video first frame */}
                       <video
                         className="w-full h-full object-cover"
                         muted
                         playsInline
                         preload="metadata"
-                        poster=""
                       >
                         <source src={`${video}#t=0.1`} type="video/mp4" />
                       </video>
                       
                       {/* Play button overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 rounded-full p-3 hover:bg-opacity-100 transition-all">
-                          <i className="fas fa-play text-[#125e51] text-lg"></i>
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="bg-white/90 rounded-full p-3">
+                          <Play size={18} className="text-[#125e51]" fill="#125e51" />
                         </div>
                       </div>
                       
                       {/* Video number */}
-                      <div className="absolute top-2 left-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                      <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
                         {videoIndex + 1}
                       </div>
                     </div>
@@ -196,14 +195,12 @@ export default function Videos() {
           </div>
         ) : openFolder !== null ? (
           /* Folder Contents View */
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="p-4 md:p-6 bg-[#125e51] text-white flex items-center space-x-4">
-              <div className="text-4xl">
-                <i className="fas fa-folder-open"></i>
-              </div>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+            <div className="p-4 md:p-6 bg-[#125e51] text-white flex items-center gap-4">
+              <FolderOpen size={36} />
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold">{clients[openFolder].name}</h2>
-                <p className="text-blue-200">{clients[openFolder].videos.length} videos</p>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{clients[openFolder].name}</h2>
+                <p className="text-emerald-200 text-sm">{clients[openFolder].videos.length} videos</p>
               </div>
             </div>
             <div className="p-4 md:p-8">
@@ -212,49 +209,48 @@ export default function Videos() {
                   <div
                     key={videoIndex}
                     onClick={() => handleVideoClick(openFolder, videoIndex)}
-                    className="group cursor-pointer bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className="group cursor-pointer bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
                   >
-                    <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
-                      {/* Video thumbnail */}
+                    <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 relative overflow-hidden">
                       <video
                         className="w-full h-full object-cover opacity-90"
                         muted
                         playsInline
                         preload="metadata"
-                        poster=""
                       >
                         <source src={`${video}#t=0.1`} type="video/mp4" />
                       </video>
                       
-                      {/* Fallback image placeholder */}
+                      {/* Fallback */}
                       <div className="absolute inset-0 bg-gradient-to-br from-[#125e51]/20 to-blue-500/20 flex items-center justify-center">
-                        <i className="fas fa-video text-4xl text-gray-500 opacity-30"></i>
+                        <Video size={40} className="text-gray-500/30" />
                       </div>
                       
-                      {/* Play button overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      {/* Play overlay */}
+                      <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <div className="bg-[#125e51] text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform">
-                          <i className="fas fa-play text-xl"></i>
+                          <Play size={22} fill="white" />
                         </div>
                       </div>
                       
                       {/* Video number badge */}
-                      <div className="absolute top-3 left-3 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <div className="absolute top-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
                         #{videoIndex + 1}
                       </div>
                       
-                      {/* Duration or status */}
-                      <div className="absolute bottom-3 right-3 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                      {/* HD badge */}
+                      <div className="absolute bottom-3 right-3 bg-black/70 text-white px-2 py-1 rounded text-xs flex items-center gap-1">
+                        <Monitor size={10} />
                         HD
                       </div>
                     </div>
                     
                     <div className="p-4">
-                      <h3 className="font-semibold text-gray-800 mb-1 line-clamp-1">
+                      <h3 className="font-semibold text-gray-800 dark:text-gray-100 mb-1 line-clamp-1">
                         {clients[openFolder].name} Project {videoIndex + 1}
                       </h3>
-                      <p className="text-gray-600 text-sm flex items-center space-x-1">
-                        <i className="fas fa-play-circle text-xs"></i>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center gap-1.5">
+                        <PlayCircle size={13} />
                         <span>Click to watch</span>
                       </p>
                     </div>
@@ -265,33 +261,29 @@ export default function Videos() {
           </div>
         ) : (
           /* Folders View */
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
             {clients.map((client, clientIndex) => (
               <div
                 key={clientIndex}
                 onClick={() => handleFolderClick(clientIndex)}
-                className="group cursor-pointer bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-4 md:p-6"
+                className="group cursor-pointer bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-5 md:p-6"
               >
                 <div className="text-center">
-                  {/* Folder Icon */}
-                  <div className="text-6xl md:text-8xl text-[#125e51] mb-4 group-hover:text-[#0f4d43] transition-colors">
-                    <i className="fas fa-folder"></i>
+                  <div className="flex justify-center mb-4">
+                    <Folder size={64} className="text-[#125e51] group-hover:text-[#0f4d43] transition-colors md:w-20 md:h-20" fill="#125e51" strokeWidth={1} />
                   </div>
                   
-                  {/* Client Name */}
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 truncate">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 truncate">
                     {client.name}
                   </h3>
                   
-                  {/* Video Count */}
-                  <div className="flex items-center justify-center space-x-2 text-gray-600">
-                    <i className="fas fa-video text-sm"></i>
+                  <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400">
+                    <Video size={14} />
                     <span className="text-sm">
                       {client.videos.length} {client.videos.length === 1 ? 'video' : 'videos'}
                     </span>
                   </div>
                   
-                  {/* Hover Effect */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="text-[#125e51] text-sm font-semibold">
                       Click to open
@@ -304,29 +296,29 @@ export default function Videos() {
         )}
       </div>
 
-      {/* Footer Stats - Only show on main folder view */}
+      {/* Footer Stats */}
       {!selectedVideo && openFolder === null && (
-        <div className="mt-12 md:mt-16 bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+        <div className="mt-12 md:mt-16 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <h4 className="text-2xl md:text-3xl font-bold text-[#125e51] mb-2">
                 {clients.length}
               </h4>
-              <p className="text-gray-600 text-sm uppercase tracking-wide">Clients</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm uppercase tracking-wide">Clients</p>
             </div>
             <div>
               <h4 className="text-2xl md:text-3xl font-bold text-[#125e51] mb-2">
                 {clients.reduce((total, client) => total + client.videos.length, 0)}
               </h4>
-              <p className="text-gray-600 text-sm uppercase tracking-wide">Videos</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm uppercase tracking-wide">Videos</p>
             </div>
             <div>
               <h4 className="text-2xl md:text-3xl font-bold text-[#125e51] mb-2">100%</h4>
-              <p className="text-gray-600 text-sm uppercase tracking-wide">Quality</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm uppercase tracking-wide">Quality</p>
             </div>
             <div>
               <h4 className="text-2xl md:text-3xl font-bold text-[#125e51] mb-2">24/7</h4>
-              <p className="text-gray-600 text-sm uppercase tracking-wide">Support</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm uppercase tracking-wide">Support</p>
             </div>
           </div>
         </div>

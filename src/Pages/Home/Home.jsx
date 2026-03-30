@@ -26,24 +26,18 @@ export default function Home() {
    <>
 <Hero/>
 
-<h2 id='about'  data-aos="fade-down"
-             data-aos-duration="1000" 
-             className='text-center text-4xl md:text-6xl lg:text-7xl  raleway pt-16   text-white'>{t('about.sectionTitle')}</h2>
+<h2 id='about' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('about.sectionTitle')}</h2>
 <About/>
-<h2 id='clients'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center
-              text-4xl md:text-6xl lg:text-7xl raleway pt-16   text-white'>{t('clients.sectionTitle')}</h2>
+<h2 id='clients' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('clients.sectionTitle')}</h2>
 <Clients/>
-<h2 id='services'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center text-4xl md:text-6xl lg:text-7xl raleway  pt-16   text-white'>{t('services.sectionTitle')}</h2>
+<h2 id='services' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('services.sectionTitle')}</h2>
 <Services/>
 <OurWork/>
 
 
 
 
-<h2 id='contact'  data-aos="fade-down"
-             data-aos-duration="1000" className='text-center text-4xl md:text-6xl lg:text-7xl raleway pt-16   text-white'>{t('contact.sectionTitle')}</h2>
+<h2 id='contact' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('contact.sectionTitle')}</h2>
 
              <Contact/>
    </>

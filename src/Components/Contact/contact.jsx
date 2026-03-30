@@ -2,10 +2,12 @@ import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import toast, { Toaster } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
+import { Phone, Mail, Send } from 'lucide-react';
 
 export default function Contact() {
   const form = useRef();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,8 +27,7 @@ export default function Contact() {
           });
         },
         (error) => {
-          console.log(error );
-          
+          console.log(error);
           toast.error(t('contact.errorMessage'), {
             style: {
               borderRadius: '10px',
@@ -38,143 +39,174 @@ export default function Contact() {
       );
   };
 
+  const inputBase =
+    'w-full rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#125e51]/50 focus:border-[#125e51] transition-all duration-200';
+
   return (
-    <section id="contact" className="py-10 w-[80%] mx-auto">
+    <section id="contact" className="py-16 sm:py-20 relative overflow-hidden">
       <Toaster position="top-center" reverseOrder={false} />
 
-      <div className="flex flex-wrap">
-        {/* Left Title */}
-        <div className="w-full md:w-1/2 mt-2">
-          <div className="flex items-center justify-start lg:mt-6">
-            <h2
-              id="About"
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              className="text-center text-5xl md:text-6xl lg:text-8xl raleway text-main"
-            >
-              {t('contact.letsGetInTouch')} <br /> {t('contact.letsGetInTouch2')}
-            </h2>
+      {/* Background accent */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#125e51]/5 dark:bg-[#125e51]/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#1abc9c]/5 dark:bg-[#1abc9c]/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-5 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* ── Left: Headline + Info ── */}
+          <div className={isAr ? 'text-right' : ''}>
+            <div>
+              <h2
+                className="text-5xl md:text-6xl lg:text-7xl font-extrabold raleway text-[#125e51] leading-tight"
+              >
+                {t('contact.letsGetInTouch')}
+                <br />
+                {t('contact.letsGetInTouch2')}
+              </h2>
+              <p className="mt-5 text-gray-600 dark:text-gray-400 text-base max-w-md leading-relaxed">
+                {t('hero.subtitle')}
+              </p>
+            </div>
+
+            {/* Contact cards */}
+            <div className="mt-10 space-y-4">
+              <a
+                href="tel:+201095010007"
+                className="flex items-center gap-4 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-4 hover:border-[#125e51]/50 dark:hover:border-[#125e51]/50 transition-all duration-300 group"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#125e51]/10 text-[#125e51] group-hover:bg-[#125e51] group-hover:text-white transition-all duration-300">
+                  <Phone size={20} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wide font-semibold">{t('footer.callUs')}</p>
+                  <p className="text-lg font-bold text-gray-900 dark:text-white" dir="ltr">+20-109-501-0007</p>
+                </div>
+              </a>
+
+              <a
+                href="mailto:sspidermarketing@gmail.com"
+                className="flex items-center gap-4 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-4 hover:border-[#125e51]/50 dark:hover:border-[#125e51]/50 transition-all duration-300 group"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#125e51]/10 text-[#125e51] group-hover:bg-[#125e51] group-hover:text-white transition-all duration-300">
+                  <Mail size={20} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wide font-semibold">Email</p>
+                  <p className="text-base font-semibold text-gray-900 dark:text-white">sspidermarketing@gmail.com</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Right Form */}
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          className="w-full md:w-1/2 mt-2"
-        >
-          <form onSubmit={sendEmail} ref={form} className="max-w-md mx-auto">
-            {/* Name */}
-            <div className="relative z-0 w-full mb-5 group">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="name"
-                className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                {t('contact.name')}
-              </label>
-            </div>
+          {/* ── Right: Form Card ── */}
+          <div>
+            <div className="rounded-2xl bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 p-6 sm:p-8 shadow-sm dark:shadow-none">
+              <form onSubmit={sendEmail} ref={form} className="space-y-5">
+                {/* Name */}
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                    {t('contact.name')}
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className={inputBase}
+                    placeholder={t('contact.name')}
+                    required
+                  />
+                </div>
 
-            {/* Phone + Company */}
-            <div className="grid md:grid-cols-2 md:gap-6">
-              <div className="relative z-0 w-full mb-5 group">
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                  htmlFor="phone"
-                  className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                {/* Phone + Company */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      {t('contact.phone')}
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      className={inputBase}
+                      placeholder={t('contact.phone')}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      {t('contact.company')}
+                    </label>
+                    <input
+                      type="text"
+                      name="company"
+                      id="company"
+                      className={inputBase}
+                      placeholder={t('contact.company')}
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                    {t('contact.email')}
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className={inputBase}
+                    placeholder={t('contact.email')}
+                    required
+                  />
+                </div>
+
+                {/* Budget */}
+                <div>
+                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                    {t('contact.budgetRange')}
+                  </label>
+                  <select
+                    name="budget"
+                    id="budget"
+                    className={inputBase}
+                    required
+                    defaultValue=""
+                  >
+                    <option value="" disabled>{t('contact.selectBudget')}</option>
+                    <option value="under 50k">{t('contact.under50k')}</option>
+                    <option value="from 50k to 100k">{t('contact.50kTo100k')}</option>
+                    <option value="Above 100k">{t('contact.above100k')}</option>
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                    {t('contact.messagePlaceholder')}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    className={inputBase + ' resize-none'}
+                    placeholder={t('contact.messagePlaceholder')}
+                    required
+                  />
+                </div>
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#125e51] px-6 py-3.5 min-h-[48px] text-sm font-bold text-white shadow-lg shadow-[#125e51]/20 hover:bg-[#0f4d43] hover:shadow-[#125e51]/40 hover:scale-[1.02] transition-all duration-300"
                 >
-                  {t('contact.phone')}
-                </label>
-              </div>
-              <div className="relative z-0 w-full mb-5 group">
-                <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                  htmlFor="company"
-                  className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  {t('contact.company')}
-                </label>
-              </div>
+                  {t('contact.sendMessage')}
+                  <Send size={14} />
+                </button>
+              </form>
             </div>
-
-            {/* Email */}
-            <div className="relative z-0 w-full mb-5 group">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="email"
-                className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                {t('contact.email')}
-              </label>
-            </div>
-            
-            {/* Budget Range */}
-            <div className="relative z-0 w-full mb-5 group">
-              <select
-                name="budget"
-                id="budget"
-                className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
-                required
-              >
-                <option value="" disabled selected className="text-white">{t('contact.selectBudget')}</option>
-                <option value="under 50k" className="text-main">{t('contact.under50k')}</option>
-                <option value="from 50k to 100k" className="text-main">{t('contact.50kTo100k')}</option>
-                <option value="Above 100k" className="text-main">{t('contact.above100k')}</option>
-              </select>
-              <label
-                htmlFor="budget"
-                className="peer-focus:font-medium absolute text-md text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                {t('contact.budgetRange')}
-              </label>
-            </div>
-
-            {/* Message */}
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              className="block p-2.5 w-full text-md text-gray-500 rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer mb-3"
-              placeholder={t('contact.messagePlaceholder')}
-              required
-            ></textarea>
-
-            {/* Button */}
-            <button
-              type="submit"
-              className="text-white bg-[#125e51] hover:bg-[#0f4d43] focus:ring-4 focus:outline-none focus:ring-[#125e51]/50 font-medium rounded-lg text-md w-full sm:w-auto px-5 py-2.5 text-center"
-            >
-              {t('contact.sendMessage')} <i className="fa-solid fa-paper-plane ms-1"></i>
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

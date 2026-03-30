@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ scrolled }) {
   const { i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
 
@@ -12,8 +12,13 @@ export default function LanguageSwitcher() {
     <button
       onClick={toggleLanguage}
       aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}
-      className="btn btn-ghost btn-sm text-white border border-white/30 hover:bg-white/10 rounded-full px-3 py-1 text-sm font-semibold tracking-wide transition-all duration-300"
+      className={`flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-xs font-bold tracking-wider backdrop-blur-sm transition-all duration-300 ${
+        scrolled
+          ? 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-transparent hover:bg-gray-100 dark:hover:bg-white/10 hover:border-[#1abc9c]/50 hover:text-[#1abc9c] dark:hover:text-[#1abc9c]'
+          : 'border-white/20 bg-white/5 text-white hover:bg-white/10 hover:border-[#1abc9c]/50 hover:text-[#1abc9c]'
+      }`}
     >
+      <i className="fa-solid fa-globe fa-xs" />
       {isArabic ? "EN" : "AR"}
     </button>
   );

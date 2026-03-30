@@ -9,65 +9,27 @@ import img7 from "../../assets/logo/7.png";
 import img8 from "../../assets/logo/8.png";
 import img9 from "../../assets/logo/9.png";
 import img10 from "../../assets/logo/10.png";
-export default function slider() {
-  
-  return (
-    <>
-    <section className="overflow-hidden w-full">
-  <div className="animate-marquee whitespace-nowrap flex w-max">
-  <img src={img1}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo01" />
-    <img src={img2}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo02" />
-    <img src={img3}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo03" />
-    <img src={img4}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo04" />
-    <img src={img5}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo05" />
-    <img src={img6}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo06" />
-    <img src={img7}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo07" />
-    <img src={img8}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo08" />
-    <img src={img9}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo09" />
-    <img src={img10} className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo10" />
-  <img src={img1}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo01" />
-    <img src={img2}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo02" />
-    <img src={img3}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo03" />
-    <img src={img4}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo04" />
-    <img src={img5}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo05" />
-    <img src={img6}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo06" />
-    <img src={img7}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo07" />
-    <img src={img8}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo08" />
-    <img src={img9}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo09" />
-    <img src={img10} className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo10" />
-  <img src={img1}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo01" />
-    <img src={img2}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo02" />
-    <img src={img3}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo03" />
-    <img src={img4}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo04" />
-    <img src={img5}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo05" />
-    <img src={img6}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo06" />
-    <img src={img7}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo07" />
-    <img src={img8}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo08" />
-    <img src={img9}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo09" />
-    <img src={img10} className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo10" />
-  <img src={img1}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo01" />
-    <img src={img2}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo02" />
-    <img src={img3}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo03" />
-    <img src={img4}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo04" />
-    <img src={img5}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo05" />
-    <img src={img6}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo06" />
-    <img src={img7}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo07" />
-    <img src={img8}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo08" />
-    <img src={img9}  className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo09" />
-    <img src={img10} className="h-20 md:h-48 object-contain inline-block mx-4" alt="logo10" />
-  </div>
-</section>
 
-    </>
+const logos = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
+export default function Slider() {
+  return (
+    <div className="overflow-hidden w-full">
+      <div
+        className="flex w-max items-center py-3"
+        style={{ animation: 'marquee 35s linear infinite', willChange: 'transform', transform: 'translateZ(0)' }}
+      >
+        {[...Array(4)].map((_, set) =>
+          logos.map((src, i) => (
+            <img
+              key={`${set}-${i}`}
+              src={src}
+              className="h-20 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain mx-6 sm:mx-8 md:mx-10 lg:mx-14 flex-shrink-0 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer"
+              alt={`partner-${i + 1}`}
+            />
+          ))
+        )}
+      </div>
+    </div>
   )
 }
-
-/* Add this to your global CSS (e.g., index.css):
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-*/

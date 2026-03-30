@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo.png' // Adjust the path as necessary
 import Maps from '../Maps/Maps'
+import { Mail } from 'lucide-react'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -10,7 +11,7 @@ export default function Footer() {
 
 
 
-      <footer className=" lg:grid lg:grid-cols-5 ">
+      <footer className="bg-gray-50 dark:bg-gray-950 lg:grid lg:grid-cols-5 ">
         <div className="relative block h-[300px] lg:col-span-2 lg:h-full">
           <Maps />
         </div>
@@ -46,7 +47,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Gmail</span>
-                    <i className="fa-solid fa-envelope  fa-lg"></i>
+                    <Mail size={22} />
                   </a>
                 </li>
                 <li>
@@ -94,7 +95,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="flex  wrap content-between space-x-6" >
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8" >
               <div className="col-5">
                 <div className='p-1'>
                   <a href='#services' className="font-medium text-gray-900 dark:text-white">{t('footer.servicesTitle')}</a>
