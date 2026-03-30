@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const clients = [
   {
@@ -48,6 +49,7 @@ export default function Videos() {
   const [openFolder, setOpenFolder] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videoLoading, setVideoLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleFolderClick = (clientIndex) => {
     setOpenFolder(openFolder === clientIndex ? null : clientIndex);
@@ -76,10 +78,10 @@ export default function Videos() {
       {/* Header */}
       <div className="text-center mb-8 md:mb-12">
         <h1 className="text-4xl md:text-6xl font-bold text-[#125e51] mb-4">
-          Video Portfolio
+          {t('videos.title')}
         </h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Explore our creative video projects organized by client folders
+          {t('videos.subtitle')}
         </p>
       </div>
 
@@ -91,7 +93,7 @@ export default function Videos() {
             className="flex items-center space-x-2 px-4 py-2 bg-[#125e51] text-white rounded-lg hover:bg-[#0f4d43] transition-colors"
           >
             <i className="fas fa-arrow-left"></i>
-            <span>Back to Folders</span>
+            <span>{t('videos.backToFolders')}</span>
           </button>
         </div>
       )}
@@ -103,7 +105,7 @@ export default function Videos() {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="p-4 md:p-6 bg-[#125e51] text-white">
               <h2 className="text-2xl md:text-3xl font-bold">
-                {clients[selectedVideo.clientIndex].name} - Video {selectedVideo.videoIndex + 1}
+                {clients[selectedVideo.clientIndex].name} - {t('videos.video')} {selectedVideo.videoIndex + 1}
               </h2>
             </div>
             <div className="p-4 md:p-8">
@@ -112,7 +114,7 @@ export default function Videos() {
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
                     <div className="text-white text-center">
                       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#125e51] mx-auto mb-4"></div>
-                      <p className="text-lg">Loading video...</p>
+                      <p className="text-lg">{t('videos.loadingVideo')}</p>
                     </div>
                   </div>
                 )}
@@ -137,14 +139,14 @@ export default function Videos() {
                     type="video/mp4" 
                   />
                   <p className="text-white p-4">
-                    Your browser does not support the video tag. 
+                    {t('videos.browserNotSupported')} 
                     <a 
                       href={clients[selectedVideo.clientIndex].videos[selectedVideo.videoIndex]} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-[#125e51] underline ml-2"
                     >
-                      Download video instead
+                      {t('videos.downloadInstead')}
                     </a>
                   </p>
                 </video>
@@ -153,7 +155,7 @@ export default function Videos() {
               {/* Other videos from same client */}
               <div className="mt-8">
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                  More from {clients[selectedVideo.clientIndex].name}
+                  {t('videos.moreFrom')} {clients[selectedVideo.clientIndex].name}
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {clients[selectedVideo.clientIndex].videos.map((video, videoIndex) => (

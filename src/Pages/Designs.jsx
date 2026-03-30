@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -26,6 +27,7 @@ export default function Designs() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [lightboxSlides, setLightboxSlides] = useState([]);
+  const { t } = useTranslation();
 
   const openLightbox = (images, index) => {
     setLightboxSlides(images.map((src) => ({ src })));
@@ -38,10 +40,10 @@ export default function Designs() {
       {/* Main Title */}
       <div className="w-[90%] mx-auto text-center mb-16">
         <h1 className="text-5xl md:text-6xl font-extrabold font-serif text-main mb-6 tracking-wide">
-          Designs
+          {t('designs.title')}
         </h1>
         <p className="text-lg md:text-xl text-gray-700 font-light">
-          See our branding, graphics, and creative design work.
+          {t('designs.subtitle')}
         </p>
       </div>
 
@@ -71,7 +73,7 @@ export default function Designs() {
                     className="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition">
-                    View Design
+                    {t('designs.viewDesign')}
                   </div>
                 </div>
               ))}

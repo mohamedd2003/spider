@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import ReactPlayer from "react-player";
@@ -27,6 +28,7 @@ export default function Campaigns() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [lightboxSlides, setLightboxSlides] = useState([]);
+  const { t } = useTranslation();
 
   const openLightbox = (images, index) => {
     setLightboxSlides(images.map((m) => ({ src: m.src })));
@@ -39,10 +41,10 @@ export default function Campaigns() {
       {/* Main Title */}
       <div className="w-[90%] mx-auto text-center mb-16">
         <h1 className="text-5xl md:text-6xl font-extrabold font-serif text-main mb-6 tracking-wide">
-          Campaigns
+          {t('campaigns.title')}
         </h1>
         <p className="text-lg md:text-xl text-gray-700 font-light">
-          Discover our marketing and advertising campaigns.
+          {t('campaigns.subtitle')}
         </p>
       </div>
 

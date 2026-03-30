@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -27,6 +28,7 @@ export default function Photos() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxSlides, setLightboxSlides] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const { t } = useTranslation();
 
   const openLightbox = (photos, index) => {
     const slides = photos.map((src) => ({ src }));
@@ -40,10 +42,10 @@ export default function Photos() {
       {/* Main Title */}
       <div className="w-[90%] mx-auto text-center mb-20">
         <h1 className="text-5xl md:text-6xl font-extrabold font-serif text-gray-900 mb-6 tracking-wide">
-          Photo Gallery
+          {t('photos.title')}
         </h1>
         <p className="text-lg md:text-xl text-gray-700 font-light max-w-2xl mx-auto">
-          Explore our creative photography work across different brands and campaigns.
+          {t('photos.subtitle')}
         </p>
       </div>
 

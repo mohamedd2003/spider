@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import toast, { Toaster } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const form = useRef();
+  const { t } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ export default function Contact() {
       })
       .then(
         () => {
-          toast.success('Message Sent Successfully', {
+          toast.success(t('contact.successMessage'), {
             style: {
               borderRadius: '10px',
               background: '#333',
@@ -25,7 +27,7 @@ export default function Contact() {
         (error) => {
           console.log(error );
           
-          toast.error('There was an Error Sending Message', {
+          toast.error(t('contact.errorMessage'), {
             style: {
               borderRadius: '10px',
               background: '#333',
@@ -50,7 +52,7 @@ export default function Contact() {
               data-aos-duration="1000"
               className="text-center text-5xl md:text-6xl lg:text-8xl raleway text-main"
             >
-              Let's get <br /> in touch
+              {t('contact.letsGetInTouch')} <br /> {t('contact.letsGetInTouch2')}
             </h2>
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function Contact() {
                 htmlFor="name"
                 className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Name
+                {t('contact.name')}
               </label>
             </div>
 
@@ -95,7 +97,7 @@ export default function Contact() {
                   htmlFor="phone"
                   className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
-                  Phone number
+                  {t('contact.phone')}
                 </label>
               </div>
               <div className="relative z-0 w-full mb-5 group">
@@ -111,7 +113,7 @@ export default function Contact() {
                   htmlFor="company"
                   className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
-                  Company (Ex. Spider)
+                  {t('contact.company')}
                 </label>
               </div>
             </div>
@@ -130,7 +132,7 @@ export default function Contact() {
                 htmlFor="email"
                 className="peer-focus:font-medium absolute text-md text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Email address
+                {t('contact.email')}
               </label>
             </div>
             
@@ -142,16 +144,16 @@ export default function Contact() {
                 className="block py-2.5 px-0 w-full text-md text-main bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer"
                 required
               >
-                <option value="" disabled selected className="text-white">Select your budget range</option>
-                <option value="under 50k" className="text-main">Under 50K</option>
-                <option value="from 50k to 100k" className="text-main">50K - 100K</option>
-                <option value="Above 100k" className="text-main">Above 100K</option>
+                <option value="" disabled selected className="text-white">{t('contact.selectBudget')}</option>
+                <option value="under 50k" className="text-main">{t('contact.under50k')}</option>
+                <option value="from 50k to 100k" className="text-main">{t('contact.50kTo100k')}</option>
+                <option value="Above 100k" className="text-main">{t('contact.above100k')}</option>
               </select>
               <label
                 htmlFor="budget"
                 className="peer-focus:font-medium absolute text-md text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Budget Range
+                {t('contact.budgetRange')}
               </label>
             </div>
 
@@ -161,7 +163,7 @@ export default function Contact() {
               name="message"
               rows="4"
               className="block p-2.5 w-full text-md text-gray-500 rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#125e51] peer mb-3"
-              placeholder="Write your Message here..."
+              placeholder={t('contact.messagePlaceholder')}
               required
             ></textarea>
 
@@ -170,7 +172,7 @@ export default function Contact() {
               type="submit"
               className="text-white bg-[#125e51] hover:bg-[#0f4d43] focus:ring-4 focus:outline-none focus:ring-[#125e51]/50 font-medium rounded-lg text-md w-full sm:w-auto px-5 py-2.5 text-center"
             >
-              Send Message <i className="fa-solid fa-paper-plane ms-1"></i>
+              {t('contact.sendMessage')} <i className="fa-solid fa-paper-plane ms-1"></i>
             </button>
           </form>
         </div>

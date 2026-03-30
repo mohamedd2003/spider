@@ -1,133 +1,134 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronRight, Target, Users, Camera, PenTool, Palette, Star, Monitor, Tv, MapPin, Globe } from 'lucide-react';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openSubtitle, setOpenSubtitle] = useState({});
+  const { t } = useTranslation();
 
   const services = [
     {
       id: 0,
-      title: "Online Marketing",
+      title: t('services.onlineMarketing'),
       icon: <Globe className="w-5 h-5" />,
       subtitles: [
         {
-          name: "Paid Ads & Digital Marketing",
+          name: t('services.paidAds'),
           content: [
-            "Managing ad campaigns on Facebook, Instagram, and TikTok",
-            "Building goal-driven campaigns (sales, engagement, messages, traffic)",
-            "Monetization setup for eligible pages (In-Stream Ads  Reels Bonuses)",
-            "Rights Manager expertise to protect your content",
-            "Creating smart funnels and analyzing performance"
+            t('services.paidAds_1'),
+            t('services.paidAds_2'),
+            t('services.paidAds_3'),
+            t('services.paidAds_4'),
+            t('services.paidAds_5'),
           ]
         },
         {
-          name: "Social Media Management",
+          name: t('services.socialMedia'),
           content: [
-            "Monthly content calendars & creative planning",
-            "Community management and audience engagement",
-            " Publishing posts, Reels, and stories",
-            "Performance tracking and optimization"
+            t('services.socialMedia_1'),
+            t('services.socialMedia_2'),
+            t('services.socialMedia_3'),
+            t('services.socialMedia_4'),
           ]
         },
         {
-          name: "Creative Production",
+          name: t('services.creativeProduction'),
           content: [
-            "Product photography (studio, flatlay)",
-            "Lifestyle photography (on-location or with models)",
-            "Video production for Reels, Ads, TikToks, and more",
-            "Graphic design for social media, ads, and more",
-            "Editing, motion graphics, and color grading"
+            t('services.creativeProduction_1'),
+            t('services.creativeProduction_2'),
+            t('services.creativeProduction_3'),
+            t('services.creativeProduction_4'),
+            t('services.creativeProduction_5'),
           ]
         },
         {
-          name: "Content Creation",
+          name: t('services.contentCreation'),
           content: [
-            "Writing scripts for Reels, Ads, and YouTube videos",
-            "Visual storytelling & brand voice development",
-            "Short-form content tailored to platforms",
+            t('services.contentCreation_1'),
+            t('services.contentCreation_2'),
+            t('services.contentCreation_3'),
           ]
         },
         {
-          name: "Branding & Graphic Design",
+          name: t('services.brandingDesign'),
           content: [
-            "Logo design & full brand identity kits",
-            "Custom post templates and campaign visuals",
-            "Product packaging designs & marketing material mockups",
+            t('services.brandingDesign_1'),
+            t('services.brandingDesign_2'),
+            t('services.brandingDesign_3'),
           ]
         },
         {
-          name: "Influencer Marketing",
+          name: t('services.influencerMarketing'),
           content: [
-            "Choosing the right influencers for your campaign",
-            "Full management of collaboration & deliverables",
-            "Measuring impact & ROI reporting"
+            t('services.influencerMarketing_1'),
+            t('services.influencerMarketing_2'),
+            t('services.influencerMarketing_3'),
           ]
         },
-        
       ]
     },
     {
       id: 1,
-      title: "Offline Marketing",
+      title: t('services.offlineMarketing'),
       icon: <MapPin className="w-5 h-5" />,
       subtitles: [
         {
-          name: "Marketing Research & Strategy",
+          name: t('services.marketResearch'),
           content: [
-            "Full market analysis: competitors, audience, trends",
-            "Local area studies & growth planning",
-            "Actionable strategies for real-world brand expansion"
+            t('services.marketResearch_1'),
+            t('services.marketResearch_2'),
+            t('services.marketResearch_3'),
           ]
         },
         {
-          name: "Event Management & Brand Activations",
+          name: t('services.eventManagement'),
           content: [
-            "Organizing product launches, activations, and corporate events",
-            "Full logistics: venue, branding, invitations, media coverage",
-            "Creating impactful live experiences that build connection"
+            t('services.eventManagement_1'),
+            t('services.eventManagement_2'),
+            t('services.eventManagement_3'),
           ]
         },
         {
-          name: "Print & Field Marketing",
+          name: t('services.printField'),
           content: [
-            "Design & print of flyers, banners, roll-ups, business cards",
-            "On-ground promo team coordination",
-            "Seamless integration between online and offline marketing"
+            t('services.printField_1'),
+            t('services.printField_2'),
+            t('services.printField_3'),
           ]
         }
       ]
     },
     {
       id: 2,
-      title: "TV & Radio Advertising",
+      title: t('services.tvRadio'),
       icon: <Tv className="w-5 h-5" />,
       subtitles: [
         {
-          name: "Broadcast Production & Media Buying",
+          name: t('services.broadcast'),
           content: [
-            "Full TV commercial production (concept, script, shoot, edit)",
-            "Radio ad production with scriptwriting and professional voiceovers",
-            "Media buying on national & local TV or radio stations",
-            "Ad scheduling and placement targeting the right audience"
+            t('services.broadcast_1'),
+            t('services.broadcast_2'),
+            t('services.broadcast_3'),
+            t('services.broadcast_4'),
           ]
         }
       ]
     },
     {
       id: 3,
-      title: "Website Design & Development",
+      title: t('services.webDev'),
       icon: <Monitor className="w-5 h-5" />,
       subtitles: [
         {
-          name: "Website Design & Development",
+          name: t('services.webDesign'),
           content: [
-            "Custom website design tailored to your brand",
-            "Mobile & desktop responsive sites",
-            "E-commerce development (online stores)",
-            "Landing pages for product launches or ad campaigns",
-            "SEO-ready structure for better visibility",
-            "Optional site maintenance and updates"
+            t('services.webDesign_1'),
+            t('services.webDesign_2'),
+            t('services.webDesign_3'),
+            t('services.webDesign_4'),
+            t('services.webDesign_5'),
+            t('services.webDesign_6'),
           ]
         }
       ]

@@ -1,12 +1,14 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function JoinUs() {
   const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation();
   
   const formik = useFormik({
     initialValues: {
@@ -43,7 +45,7 @@ export default function JoinUs() {
         )
         
         if(data.success){
-          toast.success("Form submitted successfully! Redirecting in 5 seconds...");
+          toast.success(t('joinUs.successMessage'));
           resetForm();
           
           // Wait 5 seconds before redirecting
@@ -53,7 +55,7 @@ export default function JoinUs() {
           }, 3500);
         } else {
           setIsLoading(false);
-          toast.error("Something went wrong. Please try again.");
+          toast.error(t('joinUs.errorMessage'));
         }
       } catch (err) {
         setIsLoading(false);
@@ -69,8 +71,8 @@ export default function JoinUs() {
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           {/* Header */}
           <div className="bg-[#125e51] px-8 py-6">
-            <h2 className="text-3xl font-bold text-white text-center">Join Our Team</h2>
-            <p className="text-blue-100 text-center mt-2">We're excited to learn more about you!</p>
+            <h2 className="text-3xl font-bold text-white text-center">{t('joinUs.title')}</h2>
+            <p className="text-blue-100 text-center mt-2">{t('joinUs.subtitle')}</p>
           </div>
 
           <form onSubmit={formik.handleSubmit} className="p-8">
@@ -78,13 +80,13 @@ export default function JoinUs() {
               {/* Full Name */}
               <div className="space-y-2">
                 <label htmlFor="fullName" className="block text-sm font-semibold text-gray-700">
-                  Full Name <span className="text-red-500">*</span>
+                  {t('joinUs.fullName')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="fullName"
                   name="fullName"
                   type="text"
-                  placeholder="Enter your full name"
+                  placeholder={t('joinUs.fullNamePlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.fullName}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -95,7 +97,7 @@ export default function JoinUs() {
               {/* Gender */}
               <div className="space-y-2">
                 <label htmlFor="gender" className="block text-sm font-semibold text-gray-700">
-                  Gender <span className="text-red-500">*</span>
+                  {t('joinUs.gender')} <span className="text-red-500">*</span>
                 </label>
                 <select
                   id="gender"
@@ -105,16 +107,16 @@ export default function JoinUs() {
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
                   required
                 >
-                  <option value="">Select Gender</option>
-                  <option value="ذكر">Male</option>
-                  <option value="أنثى">Female</option>
+                  <option value="">{t('joinUs.selectGender')}</option>
+                  <option value="ذكر">{t('joinUs.male')}</option>
+                  <option value="أنثى">{t('joinUs.female')}</option>
                 </select>
               </div>
 
               {/* Birth Date */}
               <div className="space-y-2">
                 <label htmlFor="birthDate" className="block text-sm font-semibold text-gray-700">
-                  Date of Birth <span className="text-red-500">*</span>
+                  {t('joinUs.birthDate')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="birthDate"
@@ -130,13 +132,13 @@ export default function JoinUs() {
               {/* Phone */}
               <div className="space-y-2">
                 <label htmlFor="phoneNumber" className="block text-sm font-semibold text-gray-700">
-                  Phone Number (Whats App)<span className="text-red-500">*</span>
+                  {t('joinUs.phone')}<span className="text-red-500">*</span>
                 </label>
                 <input
                   id="phoneNumber"
                   name="phoneNumber"
                   type="tel"
-                  placeholder="Enter your phone number"
+                  placeholder={t('joinUs.phonePlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.phoneNumber}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -147,13 +149,13 @@ export default function JoinUs() {
               {/* Email */}
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
-                  Email Address <span className="text-red-500">*</span>
+                  {t('joinUs.email')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder={t('joinUs.emailPlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.email}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -164,13 +166,13 @@ export default function JoinUs() {
               {/* University */}
               <div className="space-y-2">
                 <label htmlFor="university" className="block text-sm font-semibold text-gray-700">
-                  University <span className="text-red-500">*</span>
+                  {t('joinUs.university')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="university"
                   name="university"
                   type="text"
-                  placeholder="Enter your university name"
+                  placeholder={t('joinUs.universityPlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.university}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -181,13 +183,13 @@ export default function JoinUs() {
               {/* College */}
               <div className="space-y-2">
                 <label htmlFor="college" className="block text-sm font-semibold text-gray-700">
-                  College/Faculty <span className="text-red-500">*</span>
+                  {t('joinUs.college')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="college"
                   name="college"
                   type="text"
-                  placeholder="Enter your college/faculty"
+                  placeholder={t('joinUs.collegePlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.college}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -198,7 +200,7 @@ export default function JoinUs() {
               {/* Graduation Date */}
               <div className="space-y-2">
                 <label htmlFor="graduationDate" className="block text-sm font-semibold text-gray-700">
-                  Graduation Date <span className="text-red-500">*</span>
+                  {t('joinUs.graduationDate')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="graduationDate"
@@ -214,13 +216,13 @@ export default function JoinUs() {
               {/* Address */}
               <div className="space-y-2 md:col-span-2">
                 <label htmlFor="address" className="block text-sm font-semibold text-gray-700">
-                  Address <span className="text-red-500">*</span>
+                  {t('joinUs.address')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="address"
                   name="address"
                   type="text"
-                  placeholder="Enter your full address"
+                  placeholder={t('joinUs.addressPlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.address}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -231,7 +233,7 @@ export default function JoinUs() {
               {/* Has Marketing Experience */}
               <div className="space-y-2 md:col-span-2">
                 <label htmlFor="hasMarketingExperience" className="block text-sm font-semibold text-gray-700">
-                  Do you have marketing experience? <span className="text-red-500">*</span>
+                  {t('joinUs.hasExperience')} <span className="text-red-500">*</span>
                 </label>
                 <select
                   id="hasMarketingExperience"
@@ -241,21 +243,21 @@ export default function JoinUs() {
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
                   required
                 >
-                  <option value="">Select an option</option>
-                  <option value="نعم">Yes</option>
-                  <option value="لا">No</option>
+                  <option value="">{t('joinUs.selectOption')}</option>
+                  <option value="نعم">{t('joinUs.yes')}</option>
+                  <option value="لا">{t('joinUs.no')}</option>
                 </select>
               </div>
 
               {/* Marketing Experience */}
               <div className="space-y-2 md:col-span-2">
                 <label htmlFor="marketingExperience" className="block text-sm font-semibold text-gray-700">
-                  Marketing Experience Details
+                  {t('joinUs.experienceDetails')}
                 </label>
                 <textarea
                   id="marketingExperience"
                   name="marketingExperience"
-                  placeholder="Describe your marketing experience, projects, or skills (optional)"
+                  placeholder={t('joinUs.experiencePlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.marketingExperience}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors resize-none"
@@ -271,7 +273,7 @@ export default function JoinUs() {
                 <textarea
                   id="trainingGoals"
                   name="trainingGoals"
-                  placeholder="What do you hope to achieve through this training program?"
+                  placeholder={t('joinUs.trainingGoalsPlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.trainingGoals}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors resize-none"
@@ -287,7 +289,7 @@ export default function JoinUs() {
                 <textarea
                   id="productIdea"
                   name="productIdea"
-                  placeholder="Share any product or service ideas you have in mind"
+                  placeholder={t('joinUs.productIdeaPlaceholder')}
                   onChange={formik.handleChange}
                   value={formik.values.productIdea}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors resize-none"
@@ -298,7 +300,7 @@ export default function JoinUs() {
               {/* Image Upload */}
               <div className="space-y-2 md:col-span-2">
                 <label htmlFor="image" className="block text-sm font-semibold text-gray-700">
-                  Profile Photo <span className="text-red-500">*</span>
+                  {t('joinUs.profilePhoto')} <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <input
@@ -314,7 +316,7 @@ export default function JoinUs() {
                     className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                     required
                   />
-                  <p className="text-xs text-gray-500 mt-1">Upload a clear photo of yourself (JPG, PNG, max 5MB)</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('joinUs.photoHint')}</p>
                 </div>
               </div>
             </div>
@@ -333,14 +335,14 @@ export default function JoinUs() {
                 {isLoading ? (
                   <div className="flex items-center justify-center space-x-2">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    <span>Submitting Application...</span>
+                    <span>{t('joinUs.submitting')}</span>
                   </div>
                 ) : (
-                  'Submit Application'
+                  t('joinUs.submit')
                 )}
               </button>
               <p className="text-center text-sm text-gray-500 mt-3">
-                By submitting this form, you agree to our terms and conditions
+                {t('joinUs.termsNote')}
               </p>
             </div>
           </form>

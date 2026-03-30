@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo.png' // Adjust the path as necessary
 import Maps from '../Maps/Maps'
 
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <>
 
@@ -18,7 +20,7 @@ export default function Footer() {
             <div>
               <p>
                 <span className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                  Call us
+                  {t('footer.callUs')}
                 </span>
 
                 <a
@@ -31,7 +33,7 @@ export default function Footer() {
               </p>
 
               <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
-                <li>Sunday to Thursday : 9 AM - 6 PM</li>
+                <li>{t('footer.workingHours')}</li>
                 {/* <li>Weekend: 10am - 3pm</li> */}
               </ul>
 
@@ -95,12 +97,12 @@ export default function Footer() {
             <div className="flex  wrap content-between space-x-6" >
               <div className="col-5">
                 <div className='p-1'>
-                  <a href='#services' className="font-medium text-gray-900 dark:text-white">Services</a>
+                  <a href='#services' className="font-medium text-gray-900 dark:text-white">{t('footer.servicesTitle')}</a>
 
                   <ul className="mt-6 space-y-4 text-sm">
                     <li>
                       <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        Online Marketing
+                        {t('footer.onlineMarketing')}
 
                       </a>
                     </li>
@@ -108,7 +110,7 @@ export default function Footer() {
                     <li>
                       <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
 
-                      Offline Marketing
+                      {t('footer.offlineMarketing')}
 
                       </a>
                     </li>
@@ -116,7 +118,7 @@ export default function Footer() {
 
                     <li>
                       <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        Website Development
+                        {t('footer.websiteDev')}
 
                       </a>
                     </li>
@@ -126,24 +128,24 @@ export default function Footer() {
               </div>
               <div className='p-1'>
                 <div className='col-5 '>
-                  <p className="font-medium text-gray-900 dark:text-white">Company</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{t('footer.company')}</p>
 
                   <ul className="mt-6 space-y-4 text-sm">
                     <li>
                       <a href="#About" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        About
+                        {t('footer.about')}
                       </a>
                     </li>
 
                     <li>
                       <a href="#services" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        services
+                        {t('footer.services')}
                       </a>
                     </li>
 
                     <li>
                       <a href="#clients" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
-                        Clients
+                        {t('footer.clients')}
                       </a>
                     </li>
                   </ul>
@@ -157,26 +159,25 @@ export default function Footer() {
               <ul className="flex flex-wrap gap-4 text-xs">
                 <li>
                   <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                    Terms & Conditions
+                    {t('footer.terms')}
                   </p>
                 </li>
 
                 <li>
                   <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                    Privacy Policy
+                    {t('footer.privacy')}
                   </p>
                 </li>
 
                 <li>
                   <p href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                    Cookies
+                    {t('footer.cookies')}
                   </p>
                 </li>
               </ul>
 
               <p className="mt-8 text-xs text-gray-500 sm:mt-0 dark:text-gray-400">
-                &copy; 2018 Spider Agency All rights reserved.
-
+                {t('footer.copyright')}
               </p>
             </div>
           </div>

@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Slider from '../slider/slider'
 
 export default function Hero() {
+  const { t } = useTranslation()
   const lineStyle={
     background : 'linear-gradient(to right, rgb(0, 0, 0), #125e51)',
     width: '80px',
@@ -27,9 +29,9 @@ export default function Hero() {
       <div className="relative flex flex-wrap  items-start mt-6 justify-start    w-full h-[50vh] md:h-[50vh] lg:h-[100vh]">
         <div className="ml-6">
        
-            <h1   className="text-3xl mb-2 font-bold  md:text-9xl text-white ">SPIDER <br />AGENCY </h1>
-            <h6 className='md:text-2xl text-[10px]  mb-5 font-semibold  text-white'>Digital marketing services,visual content creation,<br />  media production services</h6>
-            <a href='#services'  className='rounded-full px-2 text-[8px] md:px-5 md:text-lg hover:text-[#125e51] fa-beat-fade font-extrabold   hover:bg-white  transition ease-in-out hover:transition-all hover:duration-500  py-2 border-[#125e51] border  text-white'>Get Started</a>
+            <h1   className="text-3xl mb-2 font-bold  md:text-9xl text-white ">{t('hero.title1')} <br />{t('hero.title2')} </h1>
+            <h6 className='md:text-2xl text-[10px]  mb-5 font-semibold  text-white'>{t('hero.subtitle')}<br />  {t('hero.subtitle2')}</h6>
+            <a href='#services'  className='rounded-full px-2 text-[8px] md:px-5 md:text-lg hover:text-[#125e51] fa-beat-fade font-extrabold   hover:bg-white  transition ease-in-out hover:transition-all hover:duration-500  py-2 border-[#125e51] border  text-white'>{t('hero.getStarted')}</a>
    
         </div>
         <div className='w-full relative bottom-10 '> 
