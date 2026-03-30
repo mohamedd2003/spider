@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import img1 from "../../assets/logo/1.png";
 import img2 from "../../assets/logo/2.png";
 import img3 from "../../assets/logo/3.png";
@@ -13,11 +14,14 @@ import img10 from "../../assets/logo/10.png";
 const logos = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 export default function Slider() {
+  const { i18n } = useTranslation()
+  const isRtl = i18n.language === 'ar'
+
   return (
-    <div className="overflow-hidden w-full">
+    <div className="overflow-hidden w-full" dir="ltr">
       <div
         className="flex w-max items-center py-3"
-        style={{ animation: 'marquee 35s linear infinite', willChange: 'transform', transform: 'translateZ(0)' }}
+        style={{ animation: `${isRtl ? 'marquee-rtl' : 'marquee'} 35s linear infinite`, willChange: 'transform', transform: 'translateZ(0)' }}
       >
         {[...Array(4)].map((_, set) =>
           logos.map((src, i) => (
