@@ -4,101 +4,76 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import ReactPlayer from "react-player";
 
-const campaigns = [
-  {
-    name: "Blabn",
-    media: [
-      { type: "image", src: "https://picsum.photos/600/400?random=1" },
-      { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { type: "image", src: "https://picsum.photos/600/400?random=1" },
-    ],
-  },
-  {
-    name: "Infinix",
-    media: [
-      { type: "video", src: "https://www.w3schools.com/html/movie.mp4" },
-      { type: "image", src: "https://via.placeholder.com/900x600?text=Infinix+Image+1" },
-      { type: "image", src: "https://via.placeholder.com/600x600?text=Infinix+Image+2" },
-    ],
-  },
+import campImg1 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (7).jpeg";
+import campImg2 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (8).jpeg";
+import campImg3 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.50 PM.jpeg";
+import campImg4 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.50 PM (1).jpeg";
+
+const media = [
+  { type: "image", src: campImg1 },
+  { type: "image", src: campImg2 },
+  { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
+  { type: "image", src: campImg3 },
+  { type: "image", src: campImg4 },
+  { type: "video", src: "https://www.w3schools.com/html/movie.mp4" },
 ];
 
 export default function Campaigns() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [lightboxSlides, setLightboxSlides] = useState([]);
   const { t } = useTranslation();
 
-  const openLightbox = (images, index) => {
-    setLightboxSlides(images.map((m) => ({ src: m.src })));
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
+  const imageItems = media.filter((m) => m.type === "image");
+  const slides = imageItems.map((m) => ({ src: m.src }));
 
   return (
-    <section className="min-h-screen pt-20 sm:pt-28 pb-16 bg-gradient-to-b from-green-50 to-white dark:from-gray-950 dark:to-gray-900">
-      {/* Main Title */}
-      <div className="w-[90%] mx-auto text-center mb-16">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-serif text-main mb-6 tracking-wide">
+    <section className="min-h-screen bg-white dark:bg-black">
+      {/* Hero header */}
+      <div className="pt-28 sm:pt-36 pb-12 px-6 text-center">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
           {t('campaigns.title')}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-light">
+        <p className="mt-4 text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl mx-auto font-light">
           {t('campaigns.subtitle')}
         </p>
       </div>
 
-      {/* Campaigns Loop */}
-      <div className="space-y-24">
-        {campaigns.map((campaign, campaignIndex) => (
-          <div key={campaignIndex} className="w-[90%] mx-auto">
-            {/* Client Name */}
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-gray-900 dark:text-white uppercase">
-                {campaign.name}
-              </h2>
-              <div className="w-24 h-1 bg-main mx-auto mt-3 rounded-full shadow-md"></div>
-            </div>
-
-            {/* Media Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {campaign.media.map((item, index) => (
-                <div key={index} className="relative group cursor-pointer">
-                  {item.type === "image" ? (
-                    <img
-                      src={item.src}
-                      alt=""
-                      className="w-full h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform"
-                      onClick={() =>
-                        openLightbox(
-                          campaign.media.filter((m) => m.type === "image"),
-                          campaign.media.filter((m) => m.type === "image").indexOf(item)
-                        )
-                      }
-                    />
-                  ) : (
-                    <div className="w-full h-64 rounded-xl overflow-hidden shadow-md">
-                      <ReactPlayer
-                        url={item.src}
-                        width="100%"
-                        height="100%"
-                        controls
-                      />
-                    </div>
-                  )}
+      {/* Gallery grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          {media.map((item, index) => (
+            <div key={index} className="break-inside-avoid overflow-hidden rounded-2xl group">
+              {item.type === "image" ? (
+                <img
+                  src={item.src}
+                  alt={`Campaign ${index + 1}`}
+                  className="w-full object-cover cursor-pointer transition-transform duration-700 ease-out group-hover:scale-105"
+                  onClick={() => {
+                    const imgIndex = imageItems.indexOf(item);
+                    setLightboxIndex(imgIndex);
+                    setLightboxOpen(true);
+                  }}
+                />
+              ) : (
+                <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black">
+                  <ReactPlayer
+                    url={item.src}
+                    width="100%"
+                    height="100%"
+                    controls
+                  />
                 </div>
-              ))}
+              )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Lightbox for Images */}
       <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
         index={lightboxIndex}
-        slides={lightboxSlides}
+        slides={slides}
       />
     </section>
   );

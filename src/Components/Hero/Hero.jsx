@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight, ArrowLeft, Play } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Slider from '../slider/slider'
+import heroBg from '../../assets/images/heroBg.jpeg'
 
 export default function Hero() {
   const { t, i18n } = useTranslation()
@@ -18,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           alt="Spider Agency hero"
-          src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751580564/IMG_8634_cmnjsj.webp"
+          src={heroBg}
           className="h-full w-full object-cover object-[center_30%] sm:object-[center_30%]"
         />
         <div className="absolute inset-0 bg-black/70" />

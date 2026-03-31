@@ -3,87 +3,57 @@ import { useTranslation } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-const clients = [
-  {
-    name: "BLABN",
-    photos: [
-      "https://picsum.photos/600/400?random=1",
-      "https://picsum.photos/500/500?random=2",
-      "https://picsum.photos/700/500?random=3",
-      "https://picsum.photos/400/600?random=4",
-    ],
-  },
-  {
-    name: "INFNIX",
-    photos: [
-      "https://picsum.photos/600/500?random=5",
-      "https://picsum.photos/500/700?random=6",
-      "https://picsum.photos/800/600?random=7",
-      "https://picsum.photos/500/500?random=8",
-    ],
-  },
-];
+import photo1 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.48 PM (1).jpeg";
+import photo2 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.48 PM.jpeg";
+import photo3 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM.jpeg";
+import photo4 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (1).jpeg";
+import photo5 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (2).jpeg";
+import photo6 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (3).jpeg";
+import photo7 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (4).jpeg";
+import photo8 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (6).jpeg";
+
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
 
 export default function Photos() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxSlides, setLightboxSlides] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const { t } = useTranslation();
 
-  const openLightbox = (photos, index) => {
-    const slides = photos.map((src) => ({ src }));
-    setLightboxSlides(slides);
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
+  const slides = photos.map((src) => ({ src }));
 
   return (
-    <section className="min-h-screen pt-20 sm:pt-28 pb-16 bg-gradient-to-b from-pink-50 to-white dark:from-gray-950 dark:to-gray-900">
-      {/* Main Title */}
-      <div className="w-[90%] mx-auto text-center mb-20">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-serif text-gray-900 dark:text-white mb-6 tracking-wide">
+    <section className="min-h-screen bg-white dark:bg-black">
+      {/* Hero header */}
+      <div className="pt-28 sm:pt-36 pb-12 px-6 text-center">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
           {t('photos.title')}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-light max-w-2xl mx-auto">
+        <p className="mt-4 text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl mx-auto font-light">
           {t('photos.subtitle')}
         </p>
       </div>
 
-      {/* Clients Loop */}
-      <div className="space-y-28">
-        {clients.map((client, clientIndex) => (
-          <div key={clientIndex} className="w-[90%] mx-auto">
-            {/* Brand Title */}
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-gray-900 dark:text-white uppercase tracking-wide">
-                {client.name}
-              </h2>
-              <div className="w-28 h-1 bg-main mx-auto mt-3 rounded-full shadow-md"></div>
+      {/* Gallery grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          {photos.map((src, index) => (
+            <div
+              key={index}
+              className="break-inside-avoid overflow-hidden rounded-2xl cursor-pointer group"
+              onClick={() => { setLightboxIndex(index); setLightboxOpen(true); }}
+            >
+              <img
+                src={src}
+                alt={`Photo ${index + 1}`}
+                className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
             </div>
-
-            {/* Gallery with Flex/Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {client.photos.map((src, index) => (
-                <div
-                  key={index}
-                  className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-[1.03] cursor-pointer"
-                  onClick={() => openLightbox(client.photos, index)}
-                >
-                  <img
-                    src={src}
-                    alt={`${client.name} ${index + 1}`}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Lightbox */}
       <Lightbox
-        slides={lightboxSlides}
+        slides={slides}
         open={lightboxOpen}
         index={lightboxIndex}
         close={() => setLightboxOpen(false)}

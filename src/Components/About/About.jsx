@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import { useTranslation } from 'react-i18next'
 import CurvedLoop from '../../../reactbits/CurvedLoop/CurvedLoop';
+import aboutImg from '../../assets/images/WhatsApp Image 2026-03-31 at 3.08.49 PM (5).jpeg'
 export default function About() {
   const { t } = useTranslation()
   return (
@@ -42,7 +43,7 @@ export default function About() {
 
   <img
     alt="about us image"
-    src="https://res.cloudinary.com/dp2kkgobw/image/upload/v1751580564/IMG_8634_cmnjsj.webp"
+    src={aboutImg}
     className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
   />
 </section>
