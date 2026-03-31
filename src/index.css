@@ -30,6 +30,77 @@ html, body {
   font-family: "Cairo", "Raleway", sans-serif;
 }
 
+/* ═══ Noise texture overlay ═══ */
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ═══ Mesh gradient backgrounds ═══ */
+.mesh-gradient-dark {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 80%, rgba(18, 94, 81, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(26, 188, 156, 0.08), transparent),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(18, 94, 81, 0.05), transparent),
+    #0a0a0a;
+}
+
+/* ═══ Custom cursor ═══ */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(26, 188, 156, 0.8);
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+  mix-blend-mode: difference;
+}
+.custom-cursor.expanded {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(26, 188, 156, 0.12);
+  border-color: rgba(26, 188, 156, 0.5);
+}
+
+/* ═══ Bento grid ═══ */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══ Glow line ═══ */
+.glow-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1abc9c, transparent);
+  opacity: 0.4;
+}
+
 /* .loader, .loader:before {
 	display: inline-block;
 	border: 50px double transparent;

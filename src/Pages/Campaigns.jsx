@@ -12,10 +12,8 @@ import campImg4 from "../assets/images/WhatsApp Image 2026-03-31 at 3.08.50 PM (
 const media = [
   { type: "image", src: campImg1 },
   { type: "image", src: campImg2 },
-  { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
   { type: "image", src: campImg3 },
   { type: "image", src: campImg4 },
-  { type: "video", src: "https://www.w3schools.com/html/movie.mp4" },
 ];
 
 export default function Campaigns() {

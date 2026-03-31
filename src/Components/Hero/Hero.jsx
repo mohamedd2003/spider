@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="#"
-      className="relative h-screen w-full overflow-hidden flex flex-col bg-black"
+      className="relative h-screen w-full overflow-hidden flex flex-col "
     >
       {/* ─── Background image ─── */}
       <div className="absolute inset-0">

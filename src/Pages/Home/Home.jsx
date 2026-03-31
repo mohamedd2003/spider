@@ -6,6 +6,7 @@ import Services from '../../Components/Services/Services'
 import Clients from '../../Components/Clients/clients'
 import Contact from '../../Components/Contact/contact'
 import OurWork from '../../Components/OurWork'
+import CustomCursor from '../../Components/CustomCursor/CustomCursor'
 import { useLocation } from 'react-router-dom'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
   }, [location]);
   return (
    <>
+<CustomCursor />
 <Hero/>
 
 <h2 id='about' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('about.sectionTitle')}</h2>
@@ -34,12 +36,8 @@ export default function Home() {
 <Services/>
 <OurWork/>
 
-
-
-
 <h2 id='contact' className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl raleway pt-16 text-gray-900 dark:text-white'>{t('contact.sectionTitle')}</h2>
-
-             <Contact/>
+<Contact/>
    </>
   )
 }
